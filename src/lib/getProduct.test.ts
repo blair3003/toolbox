@@ -38,7 +38,7 @@ describe('getProduct', () => {
         (fetch as any).mockRejectOnce(new Error('Fetch error'))
         const consoleError = jest.spyOn(console, 'error').mockImplementation(() => {})
         const result = await getProduct('1')
-        expect(result).toBeNull()
+        expect(result).toBeUndefined()
         expect(consoleError).toHaveBeenCalledWith(new Error('Fetch error'))
         consoleError.mockRestore()
     })

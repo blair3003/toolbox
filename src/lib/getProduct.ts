@@ -11,7 +11,6 @@ const getProduct = async (id: string) => {
 
     } catch (err) {
         console.error(err)
-        return null
     }
 }
 

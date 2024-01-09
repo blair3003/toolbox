@@ -8,7 +8,6 @@ const getAllProducts = async () => {
 
     } catch (err) {
         console.error(err)
-        return []
     }
 }
 

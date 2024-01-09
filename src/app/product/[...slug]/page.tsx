@@ -5,7 +5,7 @@ import getAllProducts from '@/lib/getAllProducts'
 
 export async function generateStaticParams() {
     const products = await getAllProducts()
-    return products?.map(product => ({ slug: [product.id, product.slug]}))
+    return (products) ? products.map(product => ({ slug: [product.id, product.slug]})) : []
 }
 
 export default async function Product({ params }: { params: { slug: string[] } }) {

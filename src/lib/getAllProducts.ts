@@ -1,8 +1,8 @@
 const getAllProducts = async () => {
 
     try {
-        const result = await fetch('http://localhost:3000/data/products.json')
-        const products: Product[] = await result.json()
+        const response = await fetch('http://localhost:3000/data/products.json')
+        const products: Product[] = await response.json()
     
         return products
 

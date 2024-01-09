@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1",
+        "title": "Kitchen",
+        "slug": "kitchen" 
+    },
+    {
+        "id": "2",
+        "title": "Power Tools",
+        "slug": "power-tools"
+    }
+]

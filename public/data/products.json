@@ -2,11 +2,25 @@
     {
         "id": "1",
         "title": "Toothbrush",
-        "slug": "toothbrush" 
+        "slug": "toothbrush",
+        "category": [
+            "kitchen"
+        ]
     },
     {
         "id": "2",
         "title": "Coffee",
-        "slug": "coffee"
+        "slug": "coffee",
+        "category": [
+            "kitchen"
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Electric Drill",
+        "slug": "electric-drill",
+        "category": [
+            "power-tools"
+        ]
     }
 ]

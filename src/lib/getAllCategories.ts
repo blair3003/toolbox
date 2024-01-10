@@ -1,8 +1,10 @@
+import { promises as fs } from 'fs'
+
 const getAllCategories = async () => {
 	
 	try {
-		const response = await fetch('http://localhost:3000/data/categories.json')
-		const categories: Category[] = await response.json()
+		const file = await fs.readFile(process.cwd() + '/data/categories.json', 'utf8')
+		const categories: Category[] = JSON.parse(file)
 
 		return categories
 

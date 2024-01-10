@@ -1,8 +1,10 @@
+import { promises as fs } from 'fs'
+
 const getAllProducts = async () => {
 
     try {
-        const response = await fetch('http://localhost:3000/data/products.json')
-        const products: Product[] = await response.json()
+        const file = await fs.readFile(process.cwd() + '/data/products.json', 'utf8')
+		const products: Product[] = JSON.parse(file)
     
         return products
 

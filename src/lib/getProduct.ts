@@ -7,9 +7,8 @@ const getProduct = async (id: string) => {
 		const products: Product[] = JSON.parse(file)
     
         const product = products.find(product => product.id === id)
-        if (!product) return null
     
-        return product
+        return product ?? null
 
     } catch (err) {
         console.error(err)

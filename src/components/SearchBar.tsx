@@ -1,15 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { CiSearch } from 'react-icons/ci'
 import useIsMobile from '@/hooks/useIsMobile'
 
 const SearchBar = () => {
 
     const [searchTerm, setSearchTerm] = useState('')
-    const searchParams = useSearchParams()
-    const { replace } = useRouter()
+    const router = useRouter()
     const [isMobile] = useIsMobile()
 
     const sanitizeSearchTerm = (searchTerm: string) => {
@@ -22,9 +21,9 @@ const SearchBar = () => {
 
     const handleSearch = (e: React.FormEvent) => {
         e.preventDefault()
-        const params = new URLSearchParams(searchParams)
+        const params = new URLSearchParams()
         params.set('q', sanitizeSearchTerm(searchTerm))
-        replace(`/search?${params.toString()}`)
+        router.push(`/search?${params.toString()}`)
         setSearchTerm('')
     }
 

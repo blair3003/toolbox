@@ -31,9 +31,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="grow my-auto">
-                    <Suspense fallback={<p>searchbar fallback</p>}>
-                        <SearchBar />
-                    </Suspense>
+                    <SearchBar />
                 </div>
                 <div className="flex basis-1/5 shrink-0 gap-2 my-auto">
                     <div>

@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import getProductsFromCategorySlug from '@/lib/getProductsFromCategorySlug'
-import ProductList from '@/components/ProductList'
 import getAllCategories from '@/lib/getAllCategories'
+import getCategoryFromSlug from '@/lib/getCategoryFromSlug'
+import ProductList from '@/components/ProductList'
 
 export async function generateStaticParams() {
     const categories = await getAllCategories()
@@ -13,10 +14,14 @@ export default async function Category({ params }: { params: { slug: string } })
     const { slug } = params
 
     const products = await getProductsFromCategorySlug(slug)
-	if (!products?.length) notFound()
+    const category = await getCategoryFromSlug(slug)
+	if (!products?.length || !category) notFound()
 
 	return (
-		<ProductList products={products} />
+        <div>
+            <h1>{category.title}</h1>
+            <ProductList products={products} />
+        </div>
 	)
     
 }

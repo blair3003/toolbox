@@ -9,6 +9,7 @@ const CategoryLink = ({ category }: CategoryLinkProps) => {
 	return (
 		<Link
 			href={`/category/${category.slug}`}
+			title={category.title}
 			className="block text-stone-700 hover:bg-stone-200 px-4 py-2 text-nowrap"
 		>
 			{category.title}			

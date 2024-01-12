@@ -3,6 +3,7 @@ import Image from 'next/image'
 import SearchBar from './SearchBar'
 import CategoryMenu from './CategoryMenu'
 import FavoritesLink from './FavoritesLink'
+import CartLink from './CartLink'
 
 const Header = async () => {
 
@@ -37,7 +38,7 @@ const Header = async () => {
                         <FavoritesLink />
                     </div>
                     <div>
-                        Cart
+                        <CartLink />
                     </div>
                 </div>
             </div>

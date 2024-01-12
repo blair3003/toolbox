@@ -43,7 +43,7 @@ const SearchBar = () => {
             </div>
             <button
                 title="Search for something"
-                className="h-6 w-6 lg:h-12 lg:w-12 shrink-0 grid place-content-center bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow text-sm lg:text-3xl"
+                className="h-6 w-6 lg:h-12 lg:w-12 shrink-0 grid place-content-center bg-orange-600 hover:bg-orange-700 focus:bg-orange-700 text-white rounded-full shadow text-sm lg:text-3xl"
             >
                 <span className="sr-only">Search</span>
                 <CiSearch />

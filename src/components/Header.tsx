@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import SearchBar from './SearchBar'
 import CategoryMenu from './CategoryMenu'
+import FavoritesLink from './FavoritesLink'
 
 const Header = async () => {
 
@@ -33,7 +34,7 @@ const Header = async () => {
                         Sign in
                     </div>
                     <div className="hidden lg:block">
-                        Favorites
+                        <FavoritesLink />
                     </div>
                     <div>
                         Cart

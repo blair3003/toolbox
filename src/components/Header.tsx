@@ -4,6 +4,7 @@ import SearchBar from './SearchBar'
 import CategoryMenu from './CategoryMenu'
 import FavoritesLink from './FavoritesLink'
 import CartLink from './CartLink'
+import AccountMenu from './AccountMenu'
 
 const Header = async () => {
 
@@ -32,7 +33,7 @@ const Header = async () => {
                 </div>
                 <div className="flex basis-1/5 shrink-0 gap-2 my-auto">
                     <div>
-                        Sign in
+                        <AccountMenu />
                     </div>
                     <div className="hidden lg:block">
                         <FavoritesLink />

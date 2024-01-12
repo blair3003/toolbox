@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
+import AuthProvider from '@/context/AuthProvider'
 
-const roboto = Roboto({ weight: ['300', '400'], subsets: ['latin'] })
+const roboto = Roboto({ weight: ['300', '400', '700'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Toolbox',
@@ -18,8 +19,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={roboto.className}>
-				<Header />
-				{children}
+				<AuthProvider>
+					<Header />
+					{children}
+				</AuthProvider>
 			</body>
 		</html>
 	)

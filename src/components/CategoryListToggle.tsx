@@ -12,10 +12,10 @@ const CategoryListToggle = ({ toggle, toggleRef }: CategoryListToggleProps) => {
 			ref={toggleRef as React.MutableRefObject<HTMLButtonElement>}
 			onClick={toggle}
 			title="Categories"
-			className="h-12 px-2 flex items-center gap-1 text-white text-sm hover:bg-orange-700 focus:bg-orange-700 rounded-full"
+			className="h-12 px-4 flex items-center gap-1 text-white text-xl hover:bg-orange-700 focus:bg-orange-700 rounded-full"
 		>
 			<CiMenuFries />
-			<span>Categories</span>
+			<span className="text-sm">Categories</span>
 		</button>
 	)
 

@@ -28,7 +28,7 @@ const useAuth = () => {
         //     setPending(false)
         // })
         // return () => unsubscribe()
-    }, [])
+    }, [authUser])
 
     return { authUser, authAccount, pending }
 }

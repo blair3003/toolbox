@@ -21,8 +21,8 @@ type Account = {
 }
 
 type Cart = {
-    items: [{
+    items: {
         product: Product
         quantity: number
-    }]
+    }[]
 }

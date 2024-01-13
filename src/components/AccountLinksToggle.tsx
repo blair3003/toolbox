@@ -8,8 +8,8 @@ interface AccountLinksToggleProps {
 
 const AccountLinksToggle = ({ toggle, toggleRef }: AccountLinksToggleProps) => {
 
-	const { authUser } = useAuthContext()
-	if (!authUser) return null
+	const { authAccount: account } = useAuthContext()
+	if (!account) return null
 
 	return (
 		<button
@@ -17,7 +17,7 @@ const AccountLinksToggle = ({ toggle, toggleRef }: AccountLinksToggleProps) => {
 			onClick={toggle}
 			className="h-12 px-2 flex items-center gap-1 text-white text-3xl hover:bg-orange-700 focus:bg-orange-700 rounded-full"
 		>
-			<span className="hidden lg:inline-block text-sm">{authUser.name}</span>
+			<span className="hidden lg:inline-block text-sm">{account.name}</span>
 			<span className="sr-only">Account Links</span>
 			<CiUser />
 		</button>

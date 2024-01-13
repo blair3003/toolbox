@@ -8,14 +8,14 @@ interface AccountLinksProps {
 
 const AccountLinks = ({ isOpen }: AccountLinksProps) => { 
 
-	const { authUser } = useAuthContext()
-	if (!authUser) return null
+	const { authAccount: account } = useAuthContext()
+	if (!account) return null
 
 	return (
 		<ol className={`absolute right-0 mt-4 py-2 bg-white rounded ${isOpen ? 'block' : 'hidden'}`}>
 			<li>
 				<Link
-					href={`/profile/${authUser.id}`}
+					href={`/profile/${account.id}`}
 					className="block text-stone-700 hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
 				>
 					<div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 						    <CiUser />
                         </div>
 						<div>
-							<span className="block font-bold">{authUser.name}</span>
+							<span className="block font-bold">{account.name}</span>
 							<span className="block">View your profile</span>							
 						</div>
 					</div>

@@ -11,3 +11,9 @@ type Category = {
     title: string
     slug: string
 }
+
+type Account = {
+    id: string
+    uid: string
+    name: string
+}

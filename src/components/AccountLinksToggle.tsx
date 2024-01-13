@@ -1,5 +1,5 @@
 import { CiUser } from 'react-icons/ci'
-import { useAuthContext } from '@/context/AuthProvider'
+import { useAccountContext } from '@/context/AccountProvider'
 
 interface AccountLinksToggleProps {
 	toggle: () => void
@@ -8,7 +8,7 @@ interface AccountLinksToggleProps {
 
 const AccountLinksToggle = ({ toggle, toggleRef }: AccountLinksToggleProps) => {
 
-	const { authAccount: account } = useAuthContext()
+	const { account } = useAccountContext()
 
 	return (
 		<button

@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/layouts/Header'
 import AuthProvider from '@/context/AuthProvider'
 import CartProvider from '@/context/CartProvider'
+import AccountProvider from '@/context/AccountProvider'
 
 const roboto = Roboto({ weight: ['300', '400', '700'], subsets: ['latin'] })
 
@@ -21,10 +22,12 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={roboto.className}>
 				<AuthProvider>
-					<CartProvider>
-						<Header />
-						{children}
-					</CartProvider>
+					<AccountProvider>
+						<CartProvider>
+							<Header />
+							{children}
+						</CartProvider>
+					</AccountProvider>
 				</AuthProvider>
 			</body>
 		</html>

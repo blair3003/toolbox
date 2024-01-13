@@ -1,10 +1,81 @@
-import { useEffect, useMemo, useState } from 'react'
-import { useAuthContext } from '@/context/AuthProvider'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useAccountContext } from '@/context/AccountProvider'
 
 const useCart = () => {
 
+    const testCart: Cart = {
+        items: [
+            {
+                product: {
+                    id: "1",
+                    title: "Toothbrush",
+                    slug: "toothbrush",
+                    category: [
+                        "kitchen"
+                    ],
+                    price: 10
+                }, 
+                quantity: 1
+            },                
+            {
+                product: {
+                    id: "3",
+                    title: "Electric Drill",
+                    slug: "electric-drill",
+                    category: [
+                        "power-tools"
+                    ],
+                    price: 35
+                }, 
+                quantity: 1
+            }
+        ]
+    }
+
+    const mergedCart: Cart = useMemo(() => ({
+        items: [
+            {
+                product: {
+                    id: "1",
+                    title: "Toothbrush",
+                    slug: "toothbrush",
+                    category: [
+                        "kitchen"
+                    ],
+                    price: 10
+                }, 
+                quantity: 3
+            },                
+            {
+                product: {
+                    id: "2",
+                    title: "Coffee",
+                    slug: "coffee",
+                    category: [
+                        "kitchen"
+                    ],
+                    price: 5
+                }, 
+                quantity: 7
+            },                
+            {
+                product: {
+                    id: "3",
+                    title: "Electric Drill",
+                    slug: "electric-drill",
+                    category: [
+                        "power-tools"
+                    ],
+                    price: 35
+                }, 
+                quantity: 1
+            }
+        ]
+    }), [])
+
     const [cart, setCart] = useState<Cart | null>(null)
-    const { authAccount: account } = useAuthContext()
+    const { account, setAccountCart } = useAccountContext()
+    const accountCartLoadedRef = useRef(false)
 
     const total = useMemo(() => {
         return cart?.items.reduce((total, item) => total + (item.product.price * item.quantity), 0) ?? 0
@@ -29,15 +100,30 @@ const useCart = () => {
         }))
     }
 
+    const getMergedCarts = useCallback((cart1: Cart, cart2: Cart) => {
+        console.log(`Merging:`)
+        console.log(cart1)
+        console.log(`With:`)
+        console.log(cart2)
+        return mergedCart
+    }, [mergedCart])
+
     useEffect(() => {
-        if (account) setCart(account.cart)
-    }, [account])
+        if (account && !accountCartLoadedRef.current) {
+            setCart(cart => cart ? getMergedCarts(account.cart, cart) : account.cart)
+            accountCartLoadedRef.current = true            
+        }
+        if (!account && accountCartLoadedRef.current) {
+            setCart(null)
+            accountCartLoadedRef.current = false
+        }
+    }, [account, accountCartLoadedRef, getMergedCarts])
 
     useEffect(() => {
         if (cart) {
-            // Update account cart
+            setAccountCart(cart)
         }
-    }, [cart])
+    }, [cart, setAccountCart])
 
     return { cart, total, count, addItemToCart }
 }

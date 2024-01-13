@@ -10,7 +10,8 @@ import useAuth from '@/hooks/useAuth'
 
 interface AuthContextType {
     authUser: { uid: string, name: string } | null
-	authAccount: Account | null
+	setAuthUserToNull: () => void
+	setAuthUserToTest: () => void
     pending: boolean
 }
 
@@ -20,16 +21,10 @@ export const useAuthContext = () => useContext(AuthContext) as AuthContextType
 
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
-	const { authUser, authAccount, pending } = useAuth()
-
-	const value: AuthContextType = {
-        authUser,
-		authAccount,
-        pending
-    }
+	const auth: AuthContextType = useAuth()
 
 	return (
-		<AuthContext.Provider value={value}>
+		<AuthContext.Provider value={auth}>
 			{children}
 		</AuthContext.Provider>
 	)

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { CiLogout, CiUser } from 'react-icons/ci'
+import { useAccountContext } from '@/context/AccountProvider'
 import { useAuthContext } from '@/context/AuthProvider'
 
 interface AccountLinksProps {
@@ -8,7 +9,8 @@ interface AccountLinksProps {
 
 const AccountLinks = ({ isOpen }: AccountLinksProps) => { 
 
-	const { authAccount: account } = useAuthContext()
+	const { account } = useAccountContext()
+	const { setAuthUserToNull } = useAuthContext()
 	if (!account) return null
 
 	return (
@@ -30,7 +32,7 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 				</Link>
 			</li>
 			<li>
-				<Link
+				{/* <Link
 					href="/logout"
 					className="block text-stone-700 hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
 				>
@@ -40,7 +42,18 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
                         </div>						
 						<span>Sign out</span>
 					</div>
-				</Link>
+				</Link> */}
+				<button
+					onClick={setAuthUserToNull}
+					className="block w-full text-stone-700 hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
+				>
+					<div className="flex items-center gap-2">
+                        <div className="h-8 w-8 text-2xl grid place-content-center">
+                            <CiLogout />
+                        </div>						
+						<span>Sign out</span>
+					</div>
+				</button>
 			</li>
 		</ol>
 	)

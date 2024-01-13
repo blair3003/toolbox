@@ -1,7 +1,7 @@
 type Product = {
     id: string
     title: string
-    description: string
+    description?: string
     slug: string
     category: string[]
     price: number

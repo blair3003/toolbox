@@ -1,7 +1,7 @@
 'use client'
 
 import useMenu from '@/hooks/useMenu'
-import { useAuthContext } from '@/context/AuthProvider'
+import { useAccountContext } from '@/context/AccountProvider'
 import AccountLinksToggle from './AccountLinksToggle'
 import AccountLinks from './AccountLinks'
 import SignInLink from './SignInLink'
@@ -9,11 +9,11 @@ import SignInLink from './SignInLink'
 const AccountNav = () => {
 
 	const { isOpen, toggle, ref } = useMenu()
-    const { authUser } = useAuthContext()
+    const { account } = useAccountContext()
 
 	return (
 		<nav className="relative">
-			{authUser ? <AccountLinksToggle toggle={toggle} toggleRef={ref} /> : <SignInLink />}
+			{account ? <AccountLinksToggle toggle={toggle} toggleRef={ref} /> : <SignInLink />}
 			<AccountLinks isOpen={isOpen} />
 		</nav>
 	)

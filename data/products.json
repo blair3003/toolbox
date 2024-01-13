@@ -5,7 +5,8 @@
         "slug": "toothbrush",
         "category": [
             "kitchen"
-        ]
+        ],
+        "price": 10
     },
     {
         "id": "2",
@@ -13,7 +14,8 @@
         "slug": "coffee",
         "category": [
             "kitchen"
-        ]
+        ],
+        "price": 5
     },
     {
         "id": "3",
@@ -21,6 +23,7 @@
         "slug": "electric-drill",
         "category": [
             "power-tools"
-        ]
+        ],
+        "price": 35
     }
 ]

@@ -5,7 +5,7 @@ import CartLink from '../components/CartLink'
 import AccountMenu from '../components/AccountMenu'
 import HomeLink from '../components/HomeLink'
 
-const Header = async () => {
+const Header = () => {
 
     return (
         <header className="bg-orange-600">

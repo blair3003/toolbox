@@ -8,6 +8,8 @@ interface CartContextType {
     total: number
     count: number
     addItemToCart: (product: Product, quantity?: number) => void
+	removeItemFromCart: (product: Product) => void
+	updateItemQuantity: (product: Product, quantity: number) => void
 	clearCart: () => void
 }
 

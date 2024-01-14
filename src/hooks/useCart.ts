@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from 'react'
 
 const useCart = () => {
 
-    const [cart, setCart] = useState<Cart | null>(null)
+    const [cart, setCart] = useState<Cart>({ items: [] })
 
     const total = useMemo(() => {
         return cart?.items.reduce((total, item) => total + (item.product.price * item.quantity), 0) ?? 0
@@ -13,6 +13,7 @@ const useCart = () => {
     }, [cart])
 
     const addItemToCart = useCallback((product: Product, quantity = 1) => {
+        if (quantity < 1) return
         const item = cart?.items.find(item => item.product.id === product.id)
         const items = cart?.items.filter(item => item.product.id !== product.id) ?? []
         const updatedItems = item
@@ -24,11 +25,34 @@ const useCart = () => {
         }))
     }, [cart, setCart])
 
+    const removeItemFromCart = useCallback((product: Product) => {
+        const items = cart?.items.filter(item => item.product.id !== product.id) ?? []
+        setCart(cart => ({
+            ...cart,
+            items
+        }))
+    }, [cart, setCart])
+
     const clearCart = useCallback(() => {
-        setCart(null)
+        setCart(cart => ({
+            ...cart,
+            items: []
+        }))
     }, [setCart])
 
-    return { cart, total, count, addItemToCart, clearCart, setCart }
+    const updateItemQuantity = (product: Product, quantity: number) => {
+        if (quantity < 1) return removeItemFromCart(product)
+        const item = cart?.items.find(item => item.product.id === product.id)
+        if (item?.quantity === quantity) return
+        const items = cart?.items.filter(item => item.product.id !== product.id) ?? []
+        const updatedItems = item ? [...items, { ...item, quantity }] : [...items]
+        setCart(cart => ({
+            ...cart,
+            items: updatedItems
+        }))
+    }
+
+    return { cart, total, count, addItemToCart, removeItemFromCart, updateItemQuantity, clearCart, setCart }
 }
 
 export default useCart

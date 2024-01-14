@@ -1,6 +1,8 @@
 'use client'
 
 import { useCartContext } from '@/context/CartProvider'
+import RemoveFromCartButton from './RemoveFromCartButton'
+import UpdateQuantityButton from './UpdateQuantityButton'
 
 const CartItems = () => {
 
@@ -15,6 +17,8 @@ const CartItems = () => {
                         <p>Product: {item.product.title}</p>
                         <p>Price: {item.product.price}</p>
                         <p>Quantity: {item.quantity}</p>
+                        <UpdateQuantityButton product={item.product} quantity={-7} />
+                        <RemoveFromCartButton product={item.product} />
                     </div>    
                 )}
             </div>

@@ -5,6 +5,18 @@
         "name": "Blair",
         "cart": {
             "items": [
+                {
+                    "product": {
+                        "id": "3",
+                        "title": "Electric Drill",
+                        "slug": "electric-drill",
+                        "category": [
+                            "power-tools"
+                        ],
+                        "price": 35
+                    },
+                    "quantity": 3
+                }
             ]
         }
     }

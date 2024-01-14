@@ -5,7 +5,7 @@ import useAccount from '@/hooks/useAccount'
 
 interface AccountContextType {
     account: Account | null
-	setAccountCart: (cart: Cart) => void
+	setAccountCart: (cart: Cart | null) => void
 }
 
 const AccountContext = createContext({})

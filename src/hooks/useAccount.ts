@@ -5,10 +5,10 @@ const useAccount = () => {
 
     const { authUser } = useAuthContext()
     const [account, setAccount] = useState<Account | null>(null)
-    const accountRef = useRef(false)
+    const effectRanOnceRef = useRef(false)
 
-    const setAccountCart = useCallback((cart: Cart) => {
-        setAccount(account => account ? ({ ...account, cart }) : null)
+    const setAccountCart = useCallback((cart: Cart | null) => {
+        setAccount(account => account ? cart ? ({ ...account, cart }) : ({ ...account, cart: { items: [] } }) : null)
     }, [])
     
     useEffect(() => {
@@ -28,11 +28,11 @@ const useAccount = () => {
 
     useEffect(() => {
         if (account) {
-            accountRef.current
-                ? account.cart.items.length ? console.log(`updating server`) : null
-                : accountRef.current = true
+            effectRanOnceRef.current
+                ? console.log(`updating server`)
+                : effectRanOnceRef.current = true
         }        
-    }, [account, accountRef])
+    }, [account, effectRanOnceRef])
 
     return { account, setAccountCart }
 }

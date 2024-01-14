@@ -1,11 +1,8 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { useAccountContext } from '@/context/AccountProvider'
+import { useCallback, useMemo, useState } from 'react'
 
 const useCart = () => {
 
     const [cart, setCart] = useState<Cart | null>(null)
-    const { account, setAccountCart } = useAccountContext()
-    const accountCartLoadedRef = useRef(false)
 
     const total = useMemo(() => {
         return cart?.items.reduce((total, item) => total + (item.product.price * item.quantity), 0) ?? 0
@@ -27,37 +24,11 @@ const useCart = () => {
         }))
     }, [cart, setCart])
 
-    const mergeCarts = useCallback((carts: Cart[]) => {
-        const productMap: Record<string, { product: Product; quantity: number }> = {}
-        carts.forEach(cart => {
-            cart.items.forEach(item => {
-                const { product, quantity } = item
-                productMap[product.id] = {
-                    product,
-                    quantity: (productMap[product.id]?.quantity || 0) + quantity
-                }
-            })
-        })
-        const mergedCart: Cart = { items: Object.values(productMap) }
-        return mergedCart
-    }, [])
+    const clearCart = useCallback(() => {
+        setCart(null)
+    }, [setCart])
 
-    useEffect(() => {
-        if (account && !accountCartLoadedRef.current) {
-            setCart(cart => cart ? mergeCarts([cart, account.cart]) : account.cart)
-            accountCartLoadedRef.current = true            
-        }
-        if (!account && accountCartLoadedRef.current) {
-            setCart(null)
-            accountCartLoadedRef.current = false
-        }
-    }, [account, accountCartLoadedRef, mergeCarts])
-
-    useEffect(() => {
-        if (cart) setAccountCart(cart)
-    }, [cart, setAccountCart])
-
-    return { cart, total, count, addItemToCart }
+    return { cart, total, count, addItemToCart, clearCart, setCart }
 }
 
 export default useCart

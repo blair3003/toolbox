@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useAuthContext } from '@/context/AuthProvider'
 
 const useAccount = () => {
 
     const { authUser } = useAuthContext()
     const [account, setAccount] = useState<Account | null>(null)
+    const accountRef = useRef(false)
 
     const setAccountCart = useCallback((cart: Cart) => {
         setAccount(account => account ? ({ ...account, cart }) : null)
@@ -24,6 +25,14 @@ const useAccount = () => {
             ? fetchAccount(authUser.uid)
             : setAccount(null)
     }, [authUser])
+
+    useEffect(() => {
+        if (account) {
+            accountRef.current
+                ? account.cart.items.length ? console.log(`updating server`) : null
+                : accountRef.current = true
+        }        
+    }, [account, accountRef])
 
     return { account, setAccountCart }
 }

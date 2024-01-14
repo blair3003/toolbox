@@ -7,7 +7,7 @@ interface AccountLinksProps {
 	isOpen: boolean
 }
 
-const AccountLinks = ({ isOpen }: AccountLinksProps) => { 
+const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 
 	const { account } = useAccountContext()
 	const { setAuthUserToNull } = useAuthContext()

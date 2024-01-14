@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useAuthContext } from '@/context/AuthProvider'
 
 const useAccount = () => {
@@ -17,7 +17,7 @@ const useAccount = () => {
                 const data: Account = await response.json()
                 if (data) setAccount(data)
             } catch (err) {
-                console.log(err)
+                console.error(err)
             }
         }
         authUser

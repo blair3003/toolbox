@@ -6,7 +6,7 @@ const getProductsFromCategorySlug = async (slug: string) => {
         const file = await fs.readFile(process.cwd() + '/data/products.json', 'utf8')
 		const products: Product[] = JSON.parse(file)
 
-        const productsFromCategorySlug = products.filter(product => product.category.includes(slug))
+        const productsFromCategorySlug = products.filter(product => product.category?.includes(slug))
 
         return productsFromCategorySlug
 

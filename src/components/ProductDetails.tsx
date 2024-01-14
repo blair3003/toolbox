@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import { useCartContext } from '@/context/CartProvider'
+import AddToCartButton from './AddToCartButton'
 
 interface ProductDetailsProps {
     product: Product
@@ -8,15 +8,11 @@ interface ProductDetailsProps {
 
 const ProductDetails = ({ product }: ProductDetailsProps) => {
 
-    const { addItemToCart } = useCartContext()
-
     return (
         <div>
             <p>productId: {product.id}</p>
             <p>productTitle: {product.title}</p>
-            <button onClick={() => addItemToCart(product)}>
-                Add to Cart
-            </button>
+            <AddToCartButton product={product} />
         </div>
     )
 }

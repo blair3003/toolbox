@@ -18,7 +18,7 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 			<li>
 				<Link
 					href={`/profile/${account.id}`}
-					className="block text-stone-700 hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
+					className="block text-black hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
 				>
 					<div className="flex items-center gap-2">
                         <div className="h-8 w-8 text-2xl grid place-content-center">
@@ -45,7 +45,7 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 				</Link> */}
 				<button
 					onClick={setAuthUserToNull}
-					className="block w-full text-stone-700 hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
+					className="block w-full text-black hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
 				>
 					<div className="flex items-center gap-2">
                         <div className="h-8 w-8 text-2xl grid place-content-center">

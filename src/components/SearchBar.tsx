@@ -36,7 +36,7 @@ const SearchBar = () => {
                     type="text"
                     placeholder={`${isMobile ? 'Search' : 'Search for something'}`}
                     required                    
-                    className="w-full pb-0.5 pt-1 lg:py-2 px-2 lg:px-4 text-xs lg:text-sm font-light lg:font-bold leading-3 lg:leading-7 text-stone-400 rounded-full bg-transparent"
+                    className="w-full pb-0.5 pt-1 lg:py-2 px-2 lg:px-4 text-xs lg:text-sm font-light lg:font-bold leading-3 lg:leading-7 text-black placeholder:text-stone-400 rounded-full bg-transparent"
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                 />

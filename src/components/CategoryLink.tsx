@@ -10,7 +10,7 @@ const CategoryLink = ({ category }: CategoryLinkProps) => {
 		<Link
 			href={`/category/${category.slug}`}
 			title={category.title}
-			className="block text-stone-700 hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
+			className="block text-black hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
 		>
 			{category.title}			
 		</Link>

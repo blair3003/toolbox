@@ -2,55 +2,47 @@ import { useCallback, useMemo, useState } from 'react'
 
 const useCart = () => {
 
-    const [cart, setCart] = useState<Cart>({ items: [] })
+    const [cart, setCart] = useState<Cart>({})
 
     const total = useMemo(() => {
-        return cart?.items.reduce((total, item) => total + (item.product.price * item.quantity), 0) ?? 0
+        return Object.values(cart).reduce((total, item) => total + (item.product.price * item.quantity), 0)
     }, [cart])
 
     const count = useMemo(() => {
-        return cart?.items.reduce((count, item) => count + item.quantity, 0) ?? 0
+        return Object.values(cart).reduce((count, item) => count + item.quantity, 0)
     }, [cart])
 
     const addItemToCart = useCallback((product: Product, quantity = 1) => {
         if (quantity < 1) return
-        const item = cart?.items.find(item => item.product.id === product.id)
-        const items = cart?.items.filter(item => item.product.id !== product.id) ?? []
-        const updatedItems = item
-            ? [...items, { ...item, quantity: item.quantity + quantity }]
-            : [...items, { product, quantity }]
-        setCart(cart => ({
-            ...cart,
-            items: updatedItems
-        }))
+        const updatedCart = { ...cart }
+        updatedCart[product.id] = {
+            product,
+            quantity: quantity + (updatedCart[product.id]?.quantity ?? 0)
+        }
+        setCart(updatedCart)
     }, [cart, setCart])
 
     const removeItemFromCart = useCallback((product: Product) => {
-        const items = cart?.items.filter(item => item.product.id !== product.id) ?? []
-        setCart(cart => ({
-            ...cart,
-            items
-        }))
+        const updatedCart = { ...cart }
+        if (!updatedCart[product.id]) return
+        delete updatedCart[product.id]
+        setCart(updatedCart)
+    }, [cart, setCart])
+
+    const updateItemQuantity = useCallback((product: Product, quantity: number) => {
+        if (quantity < 1) return removeItemFromCart(product)
+        const updatedCart = { ...cart }
+        if (!updatedCart[product.id]) return
+        updatedCart[product.id] = {
+            product,
+            quantity
+        }
+        setCart(updatedCart)    
     }, [cart, setCart])
 
     const clearCart = useCallback(() => {
-        setCart(cart => ({
-            ...cart,
-            items: []
-        }))
+        setCart({})
     }, [setCart])
-
-    const updateItemQuantity = (product: Product, quantity: number) => {
-        if (quantity < 1) return removeItemFromCart(product)
-        const item = cart?.items.find(item => item.product.id === product.id)
-        if (item?.quantity === quantity) return
-        const items = cart?.items.filter(item => item.product.id !== product.id) ?? []
-        const updatedItems = item ? [...items, { ...item, quantity }] : [...items]
-        setCart(cart => ({
-            ...cart,
-            items: updatedItems
-        }))
-    }
 
     return { cart, total, count, addItemToCart, removeItemFromCart, updateItemQuantity, clearCart, setCart }
 }

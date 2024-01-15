@@ -8,10 +8,10 @@ type Product = {
 }
 
 type Cart = {
-    items: {
+    [item: string]: {
         product: Product
         quantity: number
-    }[]
+    }
 }
 
 type Category = {

@@ -8,7 +8,7 @@ const useAccount = () => {
     const effectRanOnceRef = useRef(false)
 
     const setAccountCart = useCallback((cart: Cart | null) => {
-        setAccount(account => account ? cart ? ({ ...account, cart }) : ({ ...account, cart: { items: [] } }) : null)
+        setAccount(account => account ? cart ? ({ ...account, cart }) : ({ ...account, cart: {} }) : null)
     }, [])
     
     useEffect(() => {

@@ -9,17 +9,15 @@ const useAccountCart = () => {
     const accountCartLoadedRef = useRef(false)
 
     const mergeCarts = useCallback((carts: Cart[]) => {
-        const productMap: Record<string, { product: Product; quantity: number }> = {}
+        const mergedCart: Cart = {}
         carts.forEach(cart => {
-            cart.items.forEach(item => {
-                const { product, quantity } = item
-                productMap[product.id] = {
-                    product,
-                    quantity: (productMap[product.id]?.quantity || 0) + quantity
+            Object.keys(cart).forEach(item => {
+                mergedCart[item] = {
+                   product: cart[item].product,
+                   quantity: cart[item].quantity + (mergedCart[item]?.quantity ?? 0)
                 }
             })
         })
-        const mergedCart: Cart = { items: Object.values(productMap) }
         return mergedCart
     }, [])
 

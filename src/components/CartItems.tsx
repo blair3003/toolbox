@@ -12,13 +12,13 @@ const CartItems = () => {
     return (
         <div>
             <div>
-                {cart.items.map(item => 
-                    <div key={item.product.id}>
-                        <p>Product: {item.product.title}</p>
-                        <p>Price: {item.product.price}</p>
-                        <p>Quantity: {item.quantity}</p>
-                        <UpdateQuantityButton product={item.product} quantity={-7} />
-                        <RemoveFromCartButton product={item.product} />
+                {Object.keys(cart).map(item => 
+                    <div key={cart[item].product.id}>
+                        <p>Product: {cart[item].product.title}</p>
+                        <p>Price: {cart[item].product.price}</p>
+                        <p>Quantity: {cart[item].quantity}</p>
+                        <UpdateQuantityButton product={cart[item].product} quantity={7} />
+                        <RemoveFromCartButton product={cart[item].product} />
                     </div>    
                 )}
             </div>

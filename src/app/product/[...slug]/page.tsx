@@ -19,9 +19,7 @@ export default async function Product({ params }: { params: { slug: string[] } }
         <main>
             <div className="lg:max-w-screen-xl lg:mx-auto">
                 <ProductPage product={product} />
-
             </div>
-
         </main>
     )
 }

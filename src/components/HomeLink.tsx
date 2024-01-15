@@ -6,7 +6,7 @@ const HomeLink = () => {
     return (
         <Link href="/">
             <Image
-                src="/img/toolbox-transparent.png"
+                src="/img/toolbox.png"
                 alt="The Toolbox logo"
                 width={1000}
                 height={600}

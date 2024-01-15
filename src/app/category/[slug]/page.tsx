@@ -18,10 +18,14 @@ export default async function Category({ params }: { params: { slug: string } })
 	if (!products?.length || !category) notFound()
 
 	return (
-        <div>
-            <h1>{category.title}</h1>
-            <ProductList products={products} />
-        </div>
+        <main>
+            <div className="lg:max-w-screen-xl lg:mx-auto">
+                <div>
+                    <h1>{category.title}</h1>
+                    <ProductList products={products} />
+                </div>
+            </div>
+        </main>
 	)
     
 }

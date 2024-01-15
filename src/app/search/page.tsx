@@ -11,9 +11,13 @@ export default async function Search({ searchParams }: { searchParams: { q: stri
 	if (!products?.length) notFound()
 
     return (
-        <div>
-            <div>Search term: {searchTerm}</div>
-            <ProductList products={products} />
-        </div>
+        <main>
+            <div className="lg:max-w-screen-xl lg:mx-auto">
+                <div>
+                    <div>Search term: {searchTerm}</div>
+                    <ProductList products={products} />
+                </div>
+            </div>
+        </main>
     )
 }

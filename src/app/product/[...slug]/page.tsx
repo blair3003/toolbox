@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import ProductDetails from '@/components/ProductDetails'
+import ProductPage from '@/components/ProductPage'
 import getProduct from '@/lib/getProduct'
 import getAllProducts from '@/lib/getAllProducts'
 
@@ -16,6 +16,12 @@ export default async function Product({ params }: { params: { slug: string[] } }
     if (!product) notFound()
 
     return (
-        <ProductDetails product={product} />
+        <main>
+            <div className="lg:max-w-screen-xl lg:mx-auto">
+                <ProductPage product={product} />
+
+            </div>
+
+        </main>
     )
 }

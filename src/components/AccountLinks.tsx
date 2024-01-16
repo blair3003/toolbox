@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { CiLogout, CiUser } from 'react-icons/ci'
 import { useAccountContext } from '@/context/AccountProvider'
 import { useAuthContext } from '@/context/AuthProvider'
+import DarkModeToggle from './DarkModeToggle'
 
 interface AccountLinksProps {
 	isOpen: boolean
@@ -54,6 +55,10 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 						<span>Sign out</span>
 					</div>
 				</button>
+
+			</li>
+			<li>
+				<DarkModeToggle/>
 			</li>
 		</ol>
 	)

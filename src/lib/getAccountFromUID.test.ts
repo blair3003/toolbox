@@ -7,7 +7,8 @@ describe('getAccountFromUID', () => {
         expect(result).toEqual({
             "id": "1",
             "uid": "1",
-            "name": "Blair"
+            "name": "Blair",
+            "cart": {}
         })
     })
 

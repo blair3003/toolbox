@@ -38,7 +38,7 @@ const useCart = () => {
             quantity
         }
         setCart(updatedCart)    
-    }, [cart, setCart])
+    }, [cart, setCart, removeItemFromCart])
 
     const clearCart = useCallback(() => {
         setCart({})

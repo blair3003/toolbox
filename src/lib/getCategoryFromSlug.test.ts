@@ -1,6 +1,6 @@
 import getCategoryFromSlug from './getCategoryFromSlug'
 
-const slug = 'kitchen'
+const slug = 'automotive'
 const unknownSlug = 'unknown'
 
 describe('getCategoryFromSlug', () => {
@@ -9,8 +9,8 @@ describe('getCategoryFromSlug', () => {
         const result = await getCategoryFromSlug(slug)
         expect(result).toEqual({
             "id": "1",
-            "title": "Kitchen",
-            "slug": "kitchen" 
+            "title": "Automotive",
+            "slug": "automotive" 
         })
     })
 

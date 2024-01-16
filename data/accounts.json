@@ -1,21 +1,8 @@
 [
     {
-        "id": "100",
+        "id": "1",
         "uid": "1",
         "name": "Blair",
-        "cart": {
-            "3": {
-                "product": {
-                    "id": "3",
-                    "title": "Electric Drill",
-                    "slug": "electric-drill",
-                    "category": [
-                        "power-tools"
-                    ],
-                    "price": 35
-                },
-                "quantity": 3
-            }
-        }
+        "cart": {}
     }
 ]

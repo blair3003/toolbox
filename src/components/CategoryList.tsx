@@ -1,3 +1,6 @@
+'use client'
+
+import { useThemeContext } from '@/context/ThemeProvider'
 import CategoryLink from './CategoryLink'
 
 interface CategoryListProps {
@@ -7,9 +10,11 @@ interface CategoryListProps {
 
 const CategoryList = ({ categories, isOpen }: CategoryListProps) => {
 
+    const { isDarkMode } = useThemeContext()
+
 	return (
-		<ul className={`absolute mt-4 py-2 bg-white rounded ${isOpen ? 'block' : 'hidden'}`}>
-			{categories?.map(category =>
+		<ul className={`absolute z-50 mt-4 py-2 bg-white rounded ${isOpen ? 'block' : 'hidden'} ${isDarkMode ? 'bg-stone-600' : '' }`}>
+			{categories?.map(category => 
 				<li
 					key={category.id}
 					className=""

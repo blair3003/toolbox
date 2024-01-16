@@ -15,7 +15,7 @@ const getProductsFromSearchTerm = async (searchTerm: string) => {
 
 				product.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
 				product.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-				product.category?.some(category => category.toLowerCase().includes(searchTerm.toLowerCase()))
+				product.categories?.some(category => category.toLowerCase().includes(searchTerm.toLowerCase()))
 			)
 		)
 

@@ -3,7 +3,7 @@ type Product = {
     title: string
     description?: string
     slug?: string
-    category?: string[]
+    categories?: string[]
     price: number
 }
 

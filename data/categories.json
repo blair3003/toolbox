@@ -1,12 +1,97 @@
 [
     {
         "id": "1",
-        "title": "Kitchen",
-        "slug": "kitchen" 
+        "title": "Automotive",
+        "slug": "automotive" 
     },
     {
         "id": "2",
-        "title": "Power Tools",
-        "slug": "power-tools"
+        "title": "Fragrances",
+        "slug": "fragrances" 
+    },
+    {
+        "id": "3",
+        "title": "Furniture",
+        "slug": "furniture" 
+    },
+    {
+        "id": "4",
+        "title": "Groceries",
+        "slug": "groceries" 
+    },
+    {
+        "id": "5",
+        "title": "Home Decoration",
+        "slug": "home-decoration" 
+    },
+    {
+        "id": "6",
+        "title": "Laptops",
+        "slug": "laptops" 
+    },
+    {
+        "id": "7",
+        "title": "Lighting",
+        "slug": "lighting" 
+    },
+    {
+        "id": "8",
+        "title": "Mens Shirts",
+        "slug": "mens-shirts" 
+    },
+    {
+        "id": "9",
+        "title": "Mens Watches",
+        "slug": "mens-watches" 
+    },
+    {
+        "id": "10",
+        "title": "Motorcycle",
+        "slug": "motorcycle" 
+    },
+    {
+        "id": "11",
+        "title": "Skincare",
+        "slug": "skincare" 
+    },
+    {
+        "id": "12",
+        "title": "Smartphones",
+        "slug": "smartphones" 
+    },
+    {
+        "id": "13",
+        "title": "Sunglasses",
+        "slug": "sunglasses" 
+    },
+    {
+        "id": "14",
+        "title": "Tops",
+        "slug": "tops" 
+    },
+    {
+        "id": "15",
+        "title": "Womens Bags",
+        "slug": "womens-bags" 
+    },
+    {
+        "id": "16",
+        "title": "Womens Dresses",
+        "slug": "womens-dresses" 
+    },
+    {
+        "id": "17",
+        "title": "Womens Jewellery",
+        "slug": "womens-jewellery" 
+    },
+    {
+        "id": "18",
+        "title": "Womens Shoes",
+        "slug": "womens-shoes" 
+    },
+    {
+        "id": "19",
+        "title": "Womens Watches",
+        "slug": "womens-watches" 
     }
 ]

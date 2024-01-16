@@ -1,3 +1,4 @@
+import { useThemeContext } from '@/context/ThemeProvider'
 import Link from 'next/link'
 
 interface CategoryLinkProps {
@@ -6,11 +7,13 @@ interface CategoryLinkProps {
 
 const CategoryLink = ({ category }: CategoryLinkProps) => {
 
+    const { isDarkMode } = useThemeContext()
+
 	return (
 		<Link
 			href={`/category/${category.slug}`}
 			title={category.title}
-			className="block text-black hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
+			className={`block px-4 py-2 text-nowrap text-black hover:bg-stone-200 focus:bg-stone-200 ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : ''}`}
 		>
 			{category.title}			
 		</Link>

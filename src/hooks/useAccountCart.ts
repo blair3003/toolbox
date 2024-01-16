@@ -30,7 +30,7 @@ const useAccountCart = () => {
             clearCart()
             accountCartLoadedRef.current = false
         }
-    }, [account, accountCartLoadedRef, mergeCarts])
+    }, [account, accountCartLoadedRef, setCart, mergeCarts, clearCart])
 
     useEffect(() => {
         setAccountCart(cart)

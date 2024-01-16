@@ -6,11 +6,13 @@ describe('getProduct', () => {
         const result = await getProduct('1')
         expect(result).toEqual({
             "id": "1",
-            "title": "Toothbrush",
-            "slug": "toothbrush",
-            "category": [
-                "kitchen"
-            ]
+            "title": "iPhone 9",
+            "description": "An apple mobile which is nothing like apple",
+            "price": 549,
+            "stock": 94,
+            "slug": "iphone-9",
+            "categories": ["smartphones"],
+            "image": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
         })
     })
 

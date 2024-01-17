@@ -1,4 +1,8 @@
+'use client'
+
+import { useThemeContext } from '@/context/ThemeProvider'
 import ProductDetails from './ProductDetails'
+import ProductImage from './ProductImage'
 
 interface ProductPageProps {
     product: Product
@@ -6,28 +10,34 @@ interface ProductPageProps {
 
 const ProductPage = ({ product }: ProductPageProps) => {
 
-	return (
-		<section className="p-2 lg:p-4 grid lg:grid-cols-3 gap-2 lg:gap-4">
-			<h1 className="sr-only">{product.title}</h1>
+    const { isDarkMode } = useThemeContext()
 
-			<section className="lg:col-span-2 bg-red-400">
-				<h2 className="">Product Image</h2>
-				<div className="aspect-[5/4]"></div>
-			</section>
+    return (
+        <div className={`${isDarkMode ? "bg-black" : "bg-white" }`}>
+            <div className="p-2 lg:p-4 lg:max-w-screen-xl lg:mx-auto">
+                <section className="p-2 lg:p-4 grid lg:grid-cols-3 gap-2 lg:gap-4">
+                    <h1 className="sr-only">{product.title}</h1>
 
-
-			<section className="lg:row-span-2 bg-blue-600">
-				<h2 className="">Product Details</h2>
-                <ProductDetails product={product} />
-			</section>
+                    <section className="p-2 lg:p-4 lg:col-span-2">
+                        <h2 className="sr-only">Product Image</h2>
+                        {product.image && <ProductImage src={product.image} alt={product.title} />}
+                    </section>
 
 
-			<section className="lg:col-span-2 lg:row-span-2 bg-green-400">
-				<h2 className="">Product Reviews</h2>
-			</section>
+                    <section className="p-2 lg:p-4 lg:row-span-2">
+                        <h2 className="sr-only">Product Details</h2>
+                        <ProductDetails product={product} />
+                    </section>
 
-		</section>
-	)
+
+                    <section className="p-2 lg:p-4 lg:col-span-2 lg:row-span-2">
+                        <h2 className="sr-only">Product Reviews</h2>
+                    </section>
+
+                </section>
+            </div>
+        </div>
+    )
 }
 
 export default ProductPage

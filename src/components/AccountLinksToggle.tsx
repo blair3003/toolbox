@@ -16,7 +16,7 @@ const AccountLinksToggle = ({ toggle, toggleRef }: AccountLinksToggleProps) => {
 		<button
 			ref={toggleRef as React.MutableRefObject<HTMLButtonElement>}
 			onClick={toggle}
-			className={`h-8 lg:h-12 min-w-8 lg:px-4 flex items-center justify-around gap-1 text-2xl font-bold text-white hover:text-black focus:text-black hover:bg-white focus:bg-white rounded-full ${isDarkMode ? 'hover:text-white focus:text-white hover:bg-stone-700 focus:bg-stone-700' : ''}`}
+			className={`h-8 lg:h-12 min-w-8 lg:px-4 flex items-center justify-around gap-1 text-2xl font-bold rounded-full ${isDarkMode ? 'hover:text-white focus:text-white hover:bg-stone-700 focus:bg-stone-700' : 'text-white hover:text-black focus:text-black hover:bg-white focus:bg-white'}`}
 		>
 			<span className="hidden lg:inline-block text-sm">{account?.name}</span>
 			<span className="sr-only">Account Links</span>

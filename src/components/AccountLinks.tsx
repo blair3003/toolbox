@@ -18,11 +18,11 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 	if (!account) return null
 
 	return (
-		<ol className={`absolute z-50 right-0 mt-4 py-2 bg-white rounded ${isOpen ? 'block' : 'hidden'} ${isDarkMode ? 'bg-stone-600' : ''}`}>
+		<ol className={`absolute z-50 right-0 mt-4 py-2 rounded shadow-2xl border-2 ${isOpen ? 'block' : 'hidden'} ${isDarkMode ? 'bg-stone-600 border-stone-700' : 'bg-stone-100 border-stone-200'}`}>
 			<li>
 				<Link
 					href={`/profile/${account.id}`}
-					className={`block px-4 py-2 text-nowrap text-black hover:bg-stone-200 focus:bg-stone-200 ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : ''}`}
+					className={`block px-4 py-2 text-nowrap ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : 'text-black hover:bg-stone-200 focus:bg-stone-200'}`}
 				>
 					<div className="flex items-center gap-2">
                         <div className="h-8 w-8 text-2xl grid place-content-center">
@@ -49,7 +49,7 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 				</Link> */}
 				<button
 					onClick={setAuthUserToNull}
-					className={`block w-full px-4 py-2 text-nowrap text-black hover:bg-stone-200 focus:bg-stone-200 ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : ''}`}
+					className={`block w-full px-4 py-2 text-nowrap ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : 'text-black hover:bg-stone-200 focus:bg-stone-200'}`}
 				>
 					<div className="flex items-center gap-2">
                         <div className="h-8 w-8 text-2xl grid place-content-center">

@@ -13,7 +13,7 @@ const CategoryLink = ({ category }: CategoryLinkProps) => {
 		<Link
 			href={`/category/${category.slug}`}
 			title={category.title}
-			className={`block px-4 py-2 text-nowrap text-black hover:bg-stone-200 focus:bg-stone-200 ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : ''}`}
+			className={`block px-4 py-2 text-nowrap ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : 'text-black hover:bg-stone-200 focus:bg-stone-200'}`}
 		>
 			{category.title}			
 		</Link>

@@ -29,11 +29,8 @@ const SearchBar = () => {
         setSearchTerm('')
     }
 
-	const styles = "flex items-center gap-1 lg:gap-2 h-7 lg:h-14 w-full p-0.5 lg:p-1 bg-white rounded-full"
-	const darkModeStyles = isDarkMode ? "bg-stone-700" : ""
-
     return (
-        <form onSubmit={handleSearch} className={`${styles} ${darkModeStyles}`}>
+        <form onSubmit={handleSearch} className={`flex items-center gap-1 lg:gap-2 h-7 lg:h-14 w-full p-0.5 lg:p-1 rounded-full ${isDarkMode ? "bg-stone-700" : "bg-white"}`}>
             <div className="grow px-0.5 lg:px-1">
                 <label htmlFor="search" className="sr-only">Search for something</label>
                 <input
@@ -42,7 +39,7 @@ const SearchBar = () => {
                     placeholder={`${isMobile ? 'Search' : 'Search for something'}`}
                     required
                     style={{ colorScheme: isDarkMode ? 'dark' : 'normal' }}                 
-                    className={`w-full pb-0.5 pt-1 lg:py-2 px-2 lg:px-4 text-xs lg:text-sm font-light leading-3 lg:leading-7 text-black placeholder:text-stone-400 rounded-full bg-transparent ${isDarkMode ? "text-white" : ""}`}
+                    className={`w-full pb-0.5 pt-1 lg:py-2 px-2 lg:px-4 text-xs lg:text-sm font-light leading-3 lg:leading-7 placeholder:text-stone-400 rounded-full bg-transparent ${isDarkMode ? "text-white" : "text-black"}`}
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                 />

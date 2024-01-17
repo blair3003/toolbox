@@ -1,6 +1,8 @@
-'use client'
-
-import AddToCartButton from './AddToCartButton'
+import AddToFavoritesButton from './AddToFavoritesButton'
+import AddToCartForm from './AddToCartForm'
+import ProductPrice from './ProductPrice'
+import ProductTitle from './ProductTitle'
+import ProductDescription from './ProductDescription'
 
 interface ProductDetailsProps {
     product: Product
@@ -9,10 +11,12 @@ interface ProductDetailsProps {
 const ProductDetails = ({ product }: ProductDetailsProps) => {
 
     return (
-        <div>
-            <p>productId: {product.id}</p>
-            <p>productTitle: {product.title}</p>
-            <AddToCartButton product={product} />
+        <div className="p-2 lg:p-4 flex flex-col gap-2 lg:gap-4">
+            <ProductPrice price={product.price} />
+            <ProductTitle title={product.title} />
+            <ProductDescription description={product.description} />
+            <AddToCartForm product={product} />
+            <AddToFavoritesButton product={product} />
         </div>
     )
 }

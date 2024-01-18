@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import getProductsFromSearchTerm from '@/lib/getProductsFromSearchTerm'
 import SearchPage from '@/components/SearchPage'
 

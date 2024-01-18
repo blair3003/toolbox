@@ -1,13 +1,11 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { roboto } from '@/fonts/roboto'
 import './globals.css'
 import Header from '@/layouts/Header'
 import AuthProvider from '@/context/AuthProvider'
 import CartProvider from '@/context/CartProvider'
 import AccountProvider from '@/context/AccountProvider'
 import ThemeProvider from '@/context/ThemeProvider'
-
-const roboto = Roboto({ weight: ['300', '400', '700'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Toolbox',

@@ -1,6 +1,6 @@
 import { notFound, redirect } from 'next/navigation'
 import getProductsFromSearchTerm from '@/lib/getProductsFromSearchTerm'
-import ProductList from '@/components/ProductList'
+import SearchPage from '@/components/SearchPage'
 
 export default async function Search({ searchParams }: { searchParams: { q: string } }) {
 
@@ -8,16 +8,10 @@ export default async function Search({ searchParams }: { searchParams: { q: stri
 	if (!searchTerm) redirect('/')
 
     const products = await getProductsFromSearchTerm(searchTerm)
-	if (!products?.length) notFound()
 
     return (
         <main>
-            <div className="lg:max-w-screen-xl lg:mx-auto">
-                <div>
-                    <div>Search term: {searchTerm}</div>
-                    <ProductList products={products} />
-                </div>
-            </div>
+            <SearchPage searchTerm={searchTerm} products={products}/>
         </main>
     )
 }

@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import getProductsFromCategorySlug from '@/lib/getProductsFromCategorySlug'
 import getAllCategories from '@/lib/getAllCategories'
 import getCategoryFromSlug from '@/lib/getCategoryFromSlug'
-import ProductList from '@/components/ProductList'
+import CategoryPage from '@/components/CategoryPage'
 
 export async function generateStaticParams() {
     const categories = await getAllCategories()
@@ -19,12 +19,7 @@ export default async function Category({ params }: { params: { slug: string } })
 
 	return (
         <main>
-            <div className="lg:max-w-screen-xl lg:mx-auto">
-                <div>
-                    <h1>{category.title}</h1>
-                    <ProductList products={products} />
-                </div>
-            </div>
+            <CategoryPage category={category} products={products} />
         </main>
 	)
     

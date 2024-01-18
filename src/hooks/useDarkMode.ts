@@ -4,7 +4,7 @@ const LOCAL_STORAGE_KEY = 'darkMode'
 
 const useDarkMode = () => {
 
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    const [isDarkMode, setIsDarkMode] = useState(true)
 
     const toggleDarkMode = useCallback(() => {
         setIsDarkMode(!isDarkMode)
@@ -15,9 +15,9 @@ const useDarkMode = () => {
         const initDarkMode = () => {
             const stored = localStorage.getItem(LOCAL_STORAGE_KEY)
             if (stored) {
-                if (stored.toLowerCase() === 'true') setIsDarkMode(true)
+                if (stored.toLowerCase() === 'false') setIsDarkMode(false)
             } else {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) setIsDarkMode(true)
+                if (window.matchMedia('(prefers-color-scheme: light)').matches) setIsDarkMode(false)
             }
         }
         initDarkMode()

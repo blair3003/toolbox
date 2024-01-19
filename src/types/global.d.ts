@@ -3,7 +3,7 @@ type Product = {
     title: string
     description?: string
     slug?: string
-    categories?: Category[]
+    categories: Category[]
     image?: string
     price: number
 }
@@ -27,4 +27,13 @@ type Account = {
     uid: string
     name: string
     cart: Cart
+}
+
+type CategoryFilter = {
+    category: Category
+}
+
+type PriceRangeFilter = {
+    low: number
+    high: number
 }

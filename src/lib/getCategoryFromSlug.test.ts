@@ -10,6 +10,7 @@ describe('getCategoryFromSlug', () => {
         expect(result).toEqual({
             "id": "1",
             "title": "Automotive",
+            "description": "All about those 4 wheels and drive",
             "slug": "automotive" 
         })
     })

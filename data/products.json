@@ -6,7 +6,11 @@
         "price": 549,
         "stock": 94,
         "slug": "iphone-9",
-		"categories": ["smartphones"],
+		"categories": [{
+            "id": "12",
+            "title": "Smartphones",
+            "slug": "smartphones" 
+        }],
         "image": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
     },
     {
@@ -16,7 +20,11 @@
         "price": 899,
         "stock": 34,
         "slug": "iphone-x",
-		"categories": ["smartphones"],
+		"categories": [{
+        "id": "12",
+        "title": "Smartphones",
+        "slug": "smartphones" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
     },
     {
@@ -26,7 +34,11 @@
         "price": 1249,
         "stock": 36,
         "slug": "samsung-universe-9",
-		"categories": ["smartphones"],
+		"categories": [{
+        "id": "12",
+        "title": "Smartphones",
+        "slug": "smartphones" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
     },
     {
@@ -36,7 +48,11 @@
         "price": 280,
 		"stock": 123,
 		"slug": "oppof19",
-		"categories": ["smartphones"],
+		"categories": [{
+        "id": "12",
+        "title": "Smartphones",
+        "slug": "smartphones" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
     },
     {
@@ -46,7 +62,11 @@
         "price": 499,
 		"stock": 32,
 		"slug": "huawei-p30",
-		"categories": ["smartphones"],
+		"categories": [{
+        "id": "12",
+        "title": "Smartphones",
+        "slug": "smartphones" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
     },
     {
@@ -56,7 +76,11 @@
         "price": 1749,
 		"stock": 83,
 		"slug": "macbook-pro",
-		"categories": ["laptops"],
+		"categories": [{
+        "id": "6",
+        "title": "Laptops",
+        "slug": "laptops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
     },
     {
@@ -66,7 +90,11 @@
         "price": 1499,
 		"stock": 50,
 		"slug": "samsung-galaxy-book",
-		"categories": ["laptops"],
+		"categories": [{
+        "id": "6",
+        "title": "Laptops",
+        "slug": "laptops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
     },
     {
@@ -76,7 +104,11 @@
         "price": 1499,
 		"stock": 68,
 		"slug": "microsoft-surface-laptop-4",
-		"categories": ["laptops"],
+		"categories": [{
+        "id": "6",
+        "title": "Laptops",
+        "slug": "laptops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
     },
     {
@@ -86,7 +118,11 @@
         "price": 1099,
 		"stock": 96,
 		"slug": "infinix-inbook",
-		"categories": ["laptops"],
+		"categories": [{
+        "id": "6",
+        "title": "Laptops",
+        "slug": "laptops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg"
     },
     {
@@ -96,7 +132,11 @@
         "price": 1099,
 		"stock": 89,
 		"slug": "hp-pavilion-15-dk1056wm",
-		"categories": ["laptops"],
+		"categories": [{
+        "id": "6",
+        "title": "Laptops",
+        "slug": "laptops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"
     },
     {
@@ -106,7 +146,11 @@
         "price": 13,
 		"stock": 65,
 		"slug": "impression-of-acqua-di-gio",
-		"categories": ["fragrances"],
+		"categories": [{
+        "id": "2",
+        "title": "Fragrances",
+        "slug": "fragrances" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
     },
     {
@@ -116,7 +160,11 @@
         "price": 40,
         "stock": 52,
 		"slug": "brown-perfume",
-		"categories": ["fragrances"],
+		"categories": [{
+        "id": "2",
+        "title": "Fragrances",
+        "slug": "fragrances" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
     },
     {
@@ -126,7 +174,11 @@
         "price": 13,
 		"stock": 61,
 		"slug": "fog-scent-xpressio-perfume",
-		"categories": ["fragrances"],
+		"categories": [{
+        "id": "2",
+        "title": "Fragrances",
+        "slug": "fragrances" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/13/thumbnail.webp"
     },
     {
@@ -136,7 +188,11 @@
         "price": 120,
 		"stock": 114,
 		"slug": "non-alcoholic-concentrated-perfume-oil",
-		"categories": ["fragrances"],
+		"categories": [{
+        "id": "2",
+        "title": "Fragrances",
+        "slug": "fragrances" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/14/thumbnail.jpg"
     },
     {
@@ -146,7 +202,11 @@
         "price": 30,
 		"stock": 105,
 		"slug": "au-de-perfume-spray",
-		"categories": ["fragrances"],
+		"categories": [{
+        "id": "2",
+        "title": "Fragrances",
+        "slug": "fragrances" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg"
     },
     {
@@ -156,7 +216,11 @@
         "price": 19,
 		"stock": 110,
 		"slug": "hyaluronic-acid-serum",
-		"categories": ["skincare"],
+		"categories": [{
+        "id": "11",
+        "title": "Skincare",
+        "slug": "skincare" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/16/thumbnail.jpg"
     },
     {
@@ -166,7 +230,11 @@
         "price": 12,
 		"stock": 78,
 		"slug": "tree-oil-30ml",
-		"categories": ["skincare"],
+		"categories": [{
+        "id": "11",
+        "title": "Skincare",
+        "slug": "skincare" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg"
     },
     {
@@ -176,7 +244,11 @@
         "price": 40,
 		"stock": 88,
 		"slug": "oil-free-moisturizer-100ml",
-		"categories": ["skincare"],
+		"categories": [{
+        "id": "11",
+        "title": "Skincare",
+        "slug": "skincare" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
     },
     {
@@ -186,7 +258,11 @@
         "price": 46,
 		"stock": 54,
 		"slug": "skin-beauty-serum",
-		"categories": ["skincare"],
+		"categories": [{
+        "id": "11",
+        "title": "Skincare",
+        "slug": "skincare" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/19/thumbnail.jpg"
     },
     {
@@ -196,7 +272,11 @@
         "price": 70,
 		"stock": 140,
 		"slug": "freckle-treatment-cream-15gm",
-		"categories": ["skincare"],
+		"categories": [{
+        "id": "11",
+        "title": "Skincare",
+        "slug": "skincare" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/20/thumbnail.jpg"
     },
     {
@@ -206,7 +286,11 @@
         "price": 20,
 		"stock": 133,
 		"slug": "daal-masoor-500-grams",
-		"categories": ["groceries"],
+		"categories": [{
+        "id": "4",
+        "title": "Groceries",
+        "slug": "groceries" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/21/thumbnail.png"
     },
     {
@@ -216,7 +300,11 @@
         "price": 14,
 		"stock": 146,
 		"slug": "elbow-macaroni-400-gm",
-		"categories": ["groceries"],
+		"categories": [{
+        "id": "4",
+        "title": "Groceries",
+        "slug": "groceries" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/22/thumbnail.jpg"
     },
     {
@@ -226,7 +314,11 @@
         "price": 14,
 		"stock": 26,
 		"slug": "orange-essence-food-flavour",
-		"categories": ["groceries"],
+		"categories": [{
+        "id": "4",
+        "title": "Groceries",
+        "slug": "groceries" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/23/thumbnail.jpg"
     },
     {
@@ -236,7 +328,11 @@
         "price": 46,
 		"stock": 113,
 		"slug": "cereals-muesli-fruit-nuts",
-		"categories": ["groceries"],
+		"categories": [{
+        "id": "4",
+        "title": "Groceries",
+        "slug": "groceries" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg"
     },
     {
@@ -246,7 +342,11 @@
         "price": 70,
 		"stock": 47,
 		"slug": "gulab-powder-50-gram",
-		"categories": ["groceries"],
+		"categories": [{
+        "id": "4",
+        "title": "Groceries",
+        "slug": "groceries" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
     },
     {
@@ -256,7 +356,11 @@
         "price": 41,
 		"stock": 131,
 		"slug": "plant-hanger-for-home",
-		"categories": ["home-decoration"],
+		"categories": [{
+        "id": "5",
+        "title": "Home Decoration",
+        "slug": "home-decoration" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
     },
     {
@@ -266,7 +370,11 @@
         "price": 51,
 		"stock": 17,
 		"slug": "flying-wooden-bird",
-		"categories": ["home-decoration"],
+		"categories": [{
+        "id": "5",
+        "title": "Home Decoration",
+        "slug": "home-decoration" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/27/thumbnail.webp"
     },
     {
@@ -276,7 +384,11 @@
         "price": 20,
 		"stock": 54,
 		"slug": "3d-embellishment-art-lamp",
-		"categories": ["home-decoration"],
+		"categories": [{
+        "id": "5",
+        "title": "Home Decoration",
+        "slug": "home-decoration" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg"
     },
     {
@@ -286,7 +398,11 @@
         "price": 60,
 		"stock": 7,
 		"slug": "handcraft-chinese-style",
-		"categories": ["home-decoration"],
+		"categories": [{
+        "id": "5",
+        "title": "Home Decoration",
+        "slug": "home-decoration" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/29/thumbnail.webp"
     },
     {
@@ -296,7 +412,11 @@
         "price": 30,
 		"stock": 54,
 		"slug": "key-holder",
-		"categories": ["home-decoration"],
+		"categories": [{
+        "id": "5",
+        "title": "Home Decoration",
+        "slug": "home-decoration" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
     },
     {
@@ -306,7 +426,11 @@
         "price": 40,        
         "stock": 140,
 		"slug": "mornadi-velvet-bed",
-		"categories": ["furniture"],
+		"categories": [{
+        "id": "3",
+        "title": "Furniture",
+        "slug": "furniture" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/31/thumbnail.jpg"
     },
     {
@@ -316,7 +440,11 @@
         "price": 50,
 		"stock": 30,
 		"slug": "sofa-for-coffe-cafe",
-		"categories": ["furniture"],
+		"categories": [{
+        "id": "3",
+        "title": "Furniture",
+        "slug": "furniture" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/32/thumbnail.jpg"},
     {
         "id": "33",
@@ -325,7 +453,11 @@
         "price": 700,        
         "stock": 106,
 		"slug": "3-tier-corner-shelves",
-		"categories": ["furniture"],
+		"categories": [{
+        "id": "3",
+        "title": "Furniture",
+        "slug": "furniture" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/33/thumbnail.jpg"},
     {
         "id": "34",
@@ -334,7 +466,11 @@
         "price": 50,        
         "stock": 136,
 		"slug": "plastic-table",
-		"categories": ["furniture"],
+		"categories": [{
+        "id": "3",
+        "title": "Furniture",
+        "slug": "furniture" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/34/thumbnail.jpg"},
     {
         "id": "35",
@@ -343,7 +479,11 @@
         "price": 41,
 		"stock": 68,
 		"slug": "3-door-portable",
-		"categories": ["furniture"],
+		"categories": [{
+        "id": "3",
+        "title": "Furniture",
+        "slug": "furniture" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg"},
     {
         "id": "36",
@@ -352,7 +492,11 @@
         "price": 90,
 		"stock": 39,
 		"slug": "sleeve-shirt-womens",
-		"categories": ["tops"],
+		"categories": [{
+        "id": "14",
+        "title": "Tops",
+        "slug": "tops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/36/thumbnail.jpg"},
     {
         "id": "37",
@@ -361,7 +505,11 @@
         "price": 50,
 		"stock": 107,
 		"slug": "tank-tops-for-womens-girls",
-		"categories": ["tops"],
+		"categories": [{
+        "id": "14",
+        "title": "Tops",
+        "slug": "tops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/37/thumbnail.jpg"},
     {
         "id": "38",
@@ -370,7 +518,11 @@
         "price": 100,
 		"stock": 20,
 		"slug": "sublimation-plain-kids-tank",
-		"categories": ["tops"],
+		"categories": [{
+        "id": "14",
+        "title": "Tops",
+        "slug": "tops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/38/thumbnail.jpg"},
     {
         "id": "39",
@@ -379,7 +531,11 @@
         "price": 600,
 		"stock": 55,
 		"slug": "women-sweaters-wool",
-		"categories": ["tops"],
+		"categories": [{
+        "id": "14",
+        "title": "Tops",
+        "slug": "tops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/39/thumbnail.jpg"},
     {
         "id": "40",
@@ -388,7 +544,11 @@
         "price": 57,
 		"stock": 84,
 		"slug": "women-winter-clothes",
-		"categories": ["tops"],
+		"categories": [{
+        "id": "14",
+        "title": "Tops",
+        "slug": "tops" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/40/thumbnail.jpg"},
     {
         "id": "41",
@@ -397,7 +557,11 @@
         "price": 55,
 		"stock": 21,
 		"slug": "night-suit",
-		"categories": ["womens-dresses"],
+		"categories": [{
+        "id": "16",
+        "title": "Womens Dresses",
+        "slug": "womens-dresses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/41/thumbnail.jpg"},
     {
         "id": "42",
@@ -406,7 +570,11 @@
         "price": 80,
 		"stock": 148,
 		"slug": "stiched-kurta-plus-trouser",
-		"categories": ["womens-dresses"],
+		"categories": [{
+        "id": "16",
+        "title": "Womens Dresses",
+        "slug": "womens-dresses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/42/thumbnail.jpg"},
     {
         "id": "43",
@@ -415,7 +583,11 @@
         "price": 600,
 		"stock": 150,
 		"slug": "frock-gold-printed",
-		"categories": ["womens-dresses"],
+		"categories": [{
+        "id": "16",
+        "title": "Womens Dresses",
+        "slug": "womens-dresses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/43/thumbnail.jpg"},
     {
         "id": "44",
@@ -424,7 +596,11 @@
         "price": 79,
 		"stock": 2,
 		"slug": "ladies-multicolored-dress",
-		"categories": ["womens-dresses"],
+		"categories": [{
+        "id": "16",
+        "title": "Womens Dresses",
+        "slug": "womens-dresses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/44/thumbnail.jpg"},
     {
         "id": "45",
@@ -433,7 +609,11 @@
         "price": 50,
 		"stock": 96,
 		"slug": "malai-maxi-dress",
-		"categories": ["womens-dresses"],
+		"categories": [{
+        "id": "16",
+        "title": "Womens Dresses",
+        "slug": "womens-dresses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/45/thumbnail.jpg"},
     {
         "id": "46",
@@ -442,7 +622,11 @@
         "price": 40,
 		"stock": 72,
 		"slug": "womens-shoes",
-		"categories": ["womens-shoes"],
+		"categories": [{
+        "id": "18",
+        "title": "Womens Shoes",
+        "slug": "womens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/46/thumbnail.jpg"},
     {
         "id": "47",
@@ -451,7 +635,11 @@
         "price": 120,
 		"stock": 50,
 		"slug": "sneaker-shoes",
-		"categories": ["womens-shoes"],
+		"categories": [{
+        "id": "18",
+        "title": "Womens Shoes",
+        "slug": "womens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/47/thumbnail.jpeg"},
     {
         "id": "48",
@@ -460,7 +648,11 @@
         "price": 40,
 		"stock": 25,
 		"slug": "women-strip-heel",
-		"categories": ["womens-shoes"],
+		"categories": [{
+        "id": "18",
+        "title": "Womens Shoes",
+        "slug": "womens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/48/thumbnail.jpg"},
     {
         "id": "49",
@@ -469,7 +661,11 @@
         "price": 23,
 		"stock": 107,
 		"slug": "chappals-&-shoe-ladies-metallic",
-		"categories": ["womens-shoes"],
+		"categories": [{
+        "id": "18",
+        "title": "Womens Shoes",
+        "slug": "womens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/49/thumbnail.jpg"},
     {
         "id": "50",
@@ -478,7 +674,11 @@
         "price": 36,
 		"stock": 46,
 		"slug": "summer-shoes",
-		"categories": ["womens-shoes"],
+		"categories": [{
+        "id": "18",
+        "title": "Womens Shoes",
+        "slug": "womens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/50/thumbnail.jpg"},
     {
         "id": "51",
@@ -487,7 +687,11 @@
         "price": 23,
 		"stock": 132,
 		"slug": "half-sleeves-t-shirts",
-		"categories": ["mens-shirts"],
+		"categories": [{
+        "id": "8",
+        "title": "Mens Shirts",
+        "slug": "mens-shirts" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/51/thumbnail.jpg"},
     {
         "id": "52",
@@ -496,7 +700,11 @@
         "price": 10,
 		"stock": 128,
 		"slug": "free-fire-t-shirt",
-		"categories": ["mens-shirts"],
+		"categories": [{
+        "id": "8",
+        "title": "Mens Shirts",
+        "slug": "mens-shirts" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/52/thumbnail.jpg"},
     {
         "id": "53",
@@ -505,7 +713,11 @@
         "price": 35,
 		"stock": 6,
 		"slug": "printed-high-quality-t-shirts",
-		"categories": ["mens-shirts"],
+		"categories": [{
+        "id": "8",
+        "title": "Mens Shirts",
+        "slug": "mens-shirts" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/53/thumbnail.jpg"},
     {
         "id": "54",
@@ -514,7 +726,11 @@
         "price": 46,
 		"stock": 136,
 		"slug": "pubg-printed-graphic-t-shirt",
-		"categories": ["mens-shirts"],
+		"categories": [{
+        "id": "8",
+        "title": "Mens Shirts",
+        "slug": "mens-shirts" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/54/thumbnail.jpg"},
     {
         "id": "55",
@@ -523,7 +739,11 @@
         "price": 66,
 		"stock": 122,
 		"slug": "money-heist-printed-summer-t-shirts",
-		"categories": ["mens-shirts"],
+		"categories": [{
+        "id": "8",
+        "title": "Mens Shirts",
+        "slug": "mens-shirts" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/55/thumbnail.jpg"},
     {
         "id": "56",
@@ -532,7 +752,11 @@
         "price": 40,
 		"stock": 6,
 		"slug": "sneakers-joggers-shoes",
-		"categories": ["mens-shoes"],
+		"categories": [{
+        "id": "20",
+        "title": "Mens Shoes",
+        "slug": "mens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/56/thumbnail.jpg"},
     {
         "id": "57",
@@ -541,7 +765,11 @@
         "price": 47,
 		"stock": 20,
 		"slug": "loafers-for-men",
-		"categories": ["mens-shoes"],
+		"categories": [{
+        "id": "20",
+        "title": "Mens Shoes",
+        "slug": "mens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/57/thumbnail.jpg"},
     {
         "id": "58",
@@ -550,7 +778,11 @@
         "price": 57,
         "stock": 68,
 		"slug": "formal-offices-shoes",
-		"categories": ["mens-shoes"],
+		"categories": [{
+        "id": "20",
+        "title": "Mens Shoes",
+        "slug": "mens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/58/thumbnail.jpg"},
     {
         "id": "59",
@@ -559,7 +791,11 @@
         "price": 20,
 		"stock": 137,
 		"slug": "spring-and-summershoes",
-		"categories": ["mens-shoes"],
+		"categories": [{
+        "id": "20",
+        "title": "Mens Shoes",
+        "slug": "mens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg"},
     {
         "id": "60",
@@ -568,7 +804,11 @@
         "price": 58,
 		"stock": 129,
 		"slug": "stylish-casual-jeans-shoes",
-		"categories": ["mens-shoes"],
+		"categories": [{
+        "id": "20",
+        "title": "Mens Shoes",
+        "slug": "mens-shoes" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/60/thumbnail.jpg"},
     {
         "id": "61",
@@ -577,7 +817,11 @@
         "price": 120,
 		"stock": 91,
 		"slug": "leather-straps-wristwatch",
-		"categories": ["mens-watches"],
+		"categories": [{
+        "id": "9",
+        "title": "Mens Watches",
+        "slug": "mens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/61/thumbnail.jpg"},
     {
         "id": "62",
@@ -586,7 +830,11 @@
         "price": 46,
 		"stock": 95,
 		"slug": "waterproof-leather-brand-watch",
-		"categories": ["mens-watches"],
+		"categories": [{
+        "id": "9",
+        "title": "Mens Watches",
+        "slug": "mens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/62/thumbnail.jpg"},
     {
         "id": "63",
@@ -595,7 +843,11 @@
         "price": 50,
 		"stock": 142,
 		"slug": "royal-blue-premium-watch",
-		"categories": ["mens-watches"],
+		"categories": [{
+        "id": "9",
+        "title": "Mens Watches",
+        "slug": "mens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/63/thumbnail.webp"},
     {
         "id": "64",
@@ -604,7 +856,11 @@
         "price": 46,
 		"stock": 61,
 		"slug": "leather-strap-skeleton-watch",
-		"categories": ["mens-watches"],
+		"categories": [{
+        "id": "9",
+        "title": "Mens Watches",
+        "slug": "mens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/64/thumbnail.jpg"},
     {
         "id": "65",
@@ -613,7 +869,11 @@
         "price": 47,
 		"stock": 94,
 		"slug": "stainless-steel-wrist-watch",
-		"categories": ["mens-watches"],
+		"categories": [{
+        "id": "9",
+        "title": "Mens Watches",
+        "slug": "mens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/65/thumbnail.webp"},
     {
         "id": "66",
@@ -622,7 +882,11 @@
         "price": 35,
 		"stock": 24,
 		"slug": "steel-analog-couple-watches",
-		"categories": ["womens-watches"],
+		"categories": [{
+        "id": "19",
+        "title": "Womens Watches",
+        "slug": "womens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/66/thumbnail.jpg"},
     {
         "id": "67",
@@ -631,7 +895,11 @@
         "price": 60,
 		"stock": 46,
 		"slug": "fashion-magnetic-wrist-watch",
-		"categories": ["womens-watches"],
+		"categories": [{
+        "id": "19",
+        "title": "Womens Watches",
+        "slug": "womens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/67/thumbnail.jpg"},
     {
         "id": "68",
@@ -640,7 +908,11 @@
         "price": 57,
 		"stock": 77,
 		"slug": "stylish-luxury-digital-watch",
-		"categories": ["womens-watches"],
+		"categories": [{
+        "id": "19",
+        "title": "Womens Watches",
+        "slug": "womens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/68/thumbnail.webp"},
     {
         "id": "69",
@@ -649,7 +921,11 @@
         "price": 47,
 		"stock": 89,
 		"slug": "golden-watch-pearls-bracelet-watch",
-		"categories": ["womens-watches"],
+		"categories": [{
+        "id": "19",
+        "title": "Womens Watches",
+        "slug": "womens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/69/thumbnail.jpg"},
     {
         "id": "70",
@@ -658,7 +934,11 @@
         "price": 35,
 		"stock": 111,
 		"slug": "stainless-steel-women",
-		"categories": ["womens-watches"],
+		"categories": [{
+        "id": "19",
+        "title": "Womens Watches",
+        "slug": "womens-watches" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/70/thumbnail.jpg"},
     {
         "id": "71",
@@ -667,7 +947,11 @@
         "price": 46,
 		"stock": 17,
 		"slug": "women-shoulder-bags",
-		"categories": ["womens-bags"],
+		"categories": [{
+        "id": "15",
+        "title": "Womens Bags",
+        "slug": "womens-bags" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/71/thumbnail.jpg"},
     {
         "id": "72",
@@ -676,7 +960,11 @@
         "price": 23,
 		"stock": 27,
 		"slug": "handbag-for-girls",
-		"categories": ["womens-bags"],
+		"categories": [{
+        "id": "15",
+        "title": "Womens Bags",
+        "slug": "womens-bags" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/72/thumbnail.webp"},
     {
         "id": "73",
@@ -685,7 +973,11 @@
         "price": 44,
 		"stock": 101,
 		"slug": "fancy-hand-clutch",
-		"categories": ["womens-bags"],
+		"categories": [{
+        "id": "15",
+        "title": "Womens Bags",
+        "slug": "womens-bags" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/73/thumbnail.jpg"},
     {
         "id": "74",
@@ -694,7 +986,11 @@
         "price": 57,
 		"stock": 43,
 		"slug": "leather-hand-bag",
-		"categories": ["womens-bags"],
+		"categories": [{
+        "id": "15",
+        "title": "Womens Bags",
+        "slug": "womens-bags" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/74/thumbnail.jpg"},
     {
         "id": "75",
@@ -703,7 +999,11 @@
         "price": 68,
 		"stock": 13,
 		"slug": "seven-pocket-women-bag",
-		"categories": ["womens-bags"],
+		"categories": [{
+        "id": "15",
+        "title": "Womens Bags",
+        "slug": "womens-bags" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/75/thumbnail.jpg"},
     {
         "id": "76",
@@ -712,7 +1012,11 @@
         "price": 70,
 		"stock": 51,
 		"slug": "silver-ring-set-women",
-		"categories": ["womens-jewellery"],
+		"categories": [{
+        "id": "17",
+        "title": "Womens Jewellery",
+        "slug": "womens-jewellery" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/76/thumbnail.jpg"},
     {
         "id": "77",
@@ -721,7 +1025,11 @@
         "price": 100,
 		"stock": 149,
 		"slug": "rose-ring",
-		"categories": ["womens-jewellery"],
+		"categories": [{
+        "id": "17",
+        "title": "Womens Jewellery",
+        "slug": "womens-jewellery" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/77/thumbnail.jpg"},
     {
         "id": "78",
@@ -730,7 +1038,11 @@
         "price": 30,
 		"stock": 9,
 		"slug": "rhinestone-korean-style-open-rings",
-		"categories": ["womens-jewellery"],
+		"categories": [{
+        "id": "17",
+        "title": "Womens Jewellery",
+        "slug": "womens-jewellery" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/78/thumbnail.jpg"},
     {
         "id": "79",
@@ -739,7 +1051,11 @@
         "price": 30,
 		"stock": 16,
 		"slug": "elegant-female-pearl-earrings",
-		"categories": ["womens-jewellery"],
+		"categories": [{
+        "id": "17",
+        "title": "Womens Jewellery",
+        "slug": "womens-jewellery" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/79/thumbnail.jpg"},
     {
         "id": "80",
@@ -748,7 +1064,11 @@
         "price": 45,
 		"stock": 9,
 		"slug": "chain-pin-tassel-earrings",
-		"categories": ["womens-jewellery"],
+		"categories": [{
+        "id": "17",
+        "title": "Womens Jewellery",
+        "slug": "womens-jewellery" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/80/thumbnail.jpg"},
     {
         "id": "81",
@@ -757,7 +1077,11 @@
         "price": 19,
 		"stock": 78,
 		"slug": "round-silver-frame-sun-glasses",
-		"categories": ["sunglasses"],
+		"categories": [{
+        "id": "13",
+        "title": "Sunglasses",
+        "slug": "sunglasses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/81/thumbnail.jpg"},
     {
         "id": "82",
@@ -766,7 +1090,11 @@
         "price": 50,
 		"stock": 78,
 		"slug": "kabir-singh-square-sunglass",
-		"categories": ["sunglasses"],
+		"categories": [{
+        "id": "13",
+        "title": "Sunglasses",
+        "slug": "sunglasses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/82/thumbnail.jpg"},
     {
         "id": "83",
@@ -775,7 +1103,11 @@
         "price": 30,
 		"stock": 115,
 		"slug": "wiley-x-night-vision-yellow-glasses",
-		"categories": ["sunglasses"],
+		"categories": [{
+        "id": "13",
+        "title": "Sunglasses",
+        "slug": "sunglasses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/83/thumbnail.jpg"},
     {
         "id": "84",
@@ -784,7 +1116,11 @@
         "price": 28,
 		"stock": 64,
 		"slug": "square-sunglasses",
-		"categories": ["sunglasses"],
+		"categories": [{
+        "id": "13",
+        "title": "Sunglasses",
+        "slug": "sunglasses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/84/thumbnail.jpg"},
     {
         "id": "85",
@@ -793,7 +1129,11 @@
         "price": 50,
 		"stock": 92,
 		"slug": "louiswill-men-sunglasses",
-		"categories": ["sunglasses"],
+		"categories": [{
+        "id": "13",
+        "title": "Sunglasses",
+        "slug": "sunglasses" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/85/thumbnail.jpg"},
     {
         "id": "86",
@@ -802,7 +1142,12 @@
         "price": 25,
 		"stock": 22,
 		"slug": "bluetooth-aux",
-		"categories": ["automotive"],
+		"categories": [{
+            "id": "1",
+            "title": "Automotive",
+            "description": "All about those 4 wheels and drive",
+            "slug": "automotive" 
+        }],
         "image": "https://cdn.dummyjson.com/product-images/86/thumbnail.jpg"},
     {
         "id": "87",
@@ -811,7 +1156,12 @@
         "price": 40,
 		"stock": 37,
 		"slug": "temperature-controller-incubator-controller",
-		"categories": ["automotive"],
+		"categories": [{
+            "id": "1",
+            "title": "Automotive",
+            "description": "All about those 4 wheels and drive",
+            "slug": "automotive" 
+        }],
         "image": "https://cdn.dummyjson.com/product-images/87/thumbnail.jpg"},
     {
         "id": "88",
@@ -820,7 +1170,12 @@
         "price": 29,
 		"stock": 42,
 		"slug": "tc-reusable-silicone-magic-washing-gloves",
-		"categories": ["automotive"],
+		"categories": [{
+            "id": "1",
+            "title": "Automotive",
+            "description": "All about those 4 wheels and drive",
+            "slug": "automotive" 
+        }],
         "image": "https://cdn.dummyjson.com/product-images/88/thumbnail.jpg"},
     {
         "id": "89",
@@ -829,7 +1184,12 @@
         "price": 40,
 		"stock": 79,
 		"slug": "qualcomm-original-car-charger",
-		"categories": ["automotive"],
+		"categories": [{
+            "id": "1",
+            "title": "Automotive",
+            "description": "All about those 4 wheels and drive",
+            "slug": "automotive" 
+        }],
         "image": "https://cdn.dummyjson.com/product-images/89/thumbnail.jpg"},
     {
         "id": "90",
@@ -838,7 +1198,12 @@
         "price": 35,
 		"stock": 63,
 		"slug": "cycle-bike-glow",
-		"categories": ["automotive"],
+		"categories": [{
+            "id": "1",
+            "title": "Automotive",
+            "description": "All about those 4 wheels and drive",
+            "slug": "automotive" 
+        }],
         "image": "https://cdn.dummyjson.com/product-images/90/thumbnail.jpg"},
     {
         "id": "91",
@@ -847,7 +1212,11 @@
         "price": 569,
 		"stock": 115,
 		"slug": "black-motorbike",
-		"categories": ["motorcycle"],
+		"categories": [{
+        "id": "10",
+        "title": "Motorcycle",
+        "slug": "motorcycle" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/91/thumbnail.jpg"},
     {
         "id": "92",
@@ -856,7 +1225,11 @@
         "price": 920,
 		"stock": 22,
 		"slug": "hot-sale-in-europe-electric-racing-motorcycle",
-		"categories": ["motorcycle"],
+		"categories": [{
+        "id": "10",
+        "title": "Motorcycle",
+        "slug": "motorcycle" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/92/thumbnail.jpg"},
     {
         "id": "93",
@@ -865,7 +1238,11 @@
         "price": 1050,
 		"stock": 127,
 		"slug": "automatic-motor-gas-motorcycles",
-		"categories": ["motorcycle"],
+		"categories": [{
+        "id": "10",
+        "title": "Motorcycle",
+        "slug": "motorcycle" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/93/thumbnail.jpg"},
     {
         "id": "94",
@@ -874,7 +1251,11 @@
         "price": 900,
 		"stock": 109,
 		"slug": "new-arrivals-fashion-motocross-goggles",
-		"categories": ["motorcycle"],
+		"categories": [{
+        "id": "10",
+        "title": "Motorcycle",
+        "slug": "motorcycle" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/94/thumbnail.webp"},
     {
         "id": "95",
@@ -883,7 +1264,11 @@
         "price": 930,
 		"stock": 144,
 		"slug": "wholesale-cargo-lashing-belt",
-		"categories": ["motorcycle"],
+		"categories": [{
+        "id": "10",
+        "title": "Motorcycle",
+        "slug": "motorcycle" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/95/thumbnail.jpg"},
     {
         "id": "96",
@@ -892,7 +1277,11 @@
         "price": 30,
 		"stock": 96,
 		"slug": "lighting-ceiling-kitchen",
-		"categories": ["lighting"],
+		"categories": [{
+        "id": "7",
+        "title": "Lighting",
+        "slug": "lighting" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/96/thumbnail.jpg"},
     {
         "id": "97",
@@ -901,7 +1290,11 @@
         "price": 35,
 		"stock": 146,
 		"slug": "metal-ceramic-flower",
-		"categories": ["lighting"],
+		"categories": [{
+        "id": "7",
+        "title": "Lighting",
+        "slug": "lighting" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/97/thumbnail.jpg"
     },
     {
@@ -911,7 +1304,11 @@
         "price": 34,
 		"stock": 44,
 		"slug": "3-lights-lndenpant-kitchen-islang",
-		"categories": ["lighting"],
+		"categories": [{
+        "id": "7",
+        "title": "Lighting",
+        "slug": "lighting" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/98/thumbnail.jpg"
     },
     {
@@ -921,7 +1318,11 @@
         "price": 46,
 		"stock": 138,
 		"slug": "american-vintage-wood-pendant-light",
-		"categories": ["lighting"],
+		"categories": [{
+        "id": "7",
+        "title": "Lighting",
+        "slug": "lighting" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/99/thumbnail.jpg"
     },
     {
@@ -931,7 +1332,11 @@
         "price": 47,        
         "stock": 133,
 		"slug": "crystal-chandelier-maria-theresa-for-12-light",
-		"categories": ["lighting"],
+		"categories": [{
+        "id": "7",
+        "title": "Lighting",
+        "slug": "lighting" 
+    }],
         "image": "https://cdn.dummyjson.com/product-images/100/thumbnail.jpg"        
     }
 ]

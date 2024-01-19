@@ -94,5 +94,10 @@
         "id": "19",
         "title": "Womens Watches",
         "slug": "womens-watches" 
+    },
+    {
+        "id": "20",
+        "title": "Mens Shoes",
+        "slug": "mens-shoes" 
     }
 ]

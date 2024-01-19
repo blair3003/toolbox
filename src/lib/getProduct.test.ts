@@ -11,7 +11,11 @@ describe('getProduct', () => {
             "price": 549,
             "stock": 94,
             "slug": "iphone-9",
-            "categories": ["smartphones"],
+            "categories": [{
+                "id": "12",
+                "title": "Smartphones",
+                "slug": "smartphones" 
+            }],
             "image": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
         })
     })

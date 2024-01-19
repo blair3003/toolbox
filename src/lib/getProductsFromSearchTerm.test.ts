@@ -17,7 +17,11 @@ describe('getProductsFromSearchTerm', () => {
 			"price": 1249,
 			"stock": 36,
 			"slug": "samsung-universe-9",
-			"categories": ["smartphones"],
+			"categories": [{
+				"id": "12",
+				"title": "Smartphones",
+				"slug": "smartphones" 
+			}],
 			"image": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
 		},
 		{
@@ -27,7 +31,11 @@ describe('getProductsFromSearchTerm', () => {
 			"price": 1499,
 			"stock": 50,
 			"slug": "samsung-galaxy-book",
-			"categories": ["laptops"],
+			"categories": [{
+				"id": "6",
+				"title": "Laptops",
+				"slug": "laptops" 
+			}],
 			"image": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
 		}])
 	})
@@ -41,7 +49,11 @@ describe('getProductsFromSearchTerm', () => {
 			"price": 1249,
 			"stock": 36,
 			"slug": "samsung-universe-9",
-			"categories": ["smartphones"],
+			"categories": [{
+				"id": "12",
+				"title": "Smartphones",
+				"slug": "smartphones" 
+			}],
 			"image": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
 		},
 		{
@@ -51,7 +63,11 @@ describe('getProductsFromSearchTerm', () => {
 			"price": 1499,
 			"stock": 50,
 			"slug": "samsung-galaxy-book",
-			"categories": ["laptops"],
+			"categories": [{
+				"id": "6",
+				"title": "Laptops",
+				"slug": "laptops" 
+			}],
 			"image": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
 		},
 		{
@@ -61,7 +77,11 @@ describe('getProductsFromSearchTerm', () => {
 			"price": 12,
 			"stock": 78,
 			"slug": "tree-oil-30ml",
-			"categories": ["skincare"],
+			"categories": [{
+				"id": "11",
+				"title": "Skincare",
+				"slug": "skincare" 
+			}],
 			"image": "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg"
 		}])
 	})

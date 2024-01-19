@@ -11,7 +11,11 @@ describe('getProductsFromCategorySlug', () => {
             "price": 549,
             "stock": 94,
             "slug": "iphone-9",
-            "categories": ["smartphones"],
+            "categories": [{
+                "id": "12",
+                "title": "Smartphones",
+                "slug": "smartphones" 
+            }],
             "image": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
         },
         {
@@ -21,7 +25,11 @@ describe('getProductsFromCategorySlug', () => {
             "price": 899,
             "stock": 34,
             "slug": "iphone-x",
-            "categories": ["smartphones"],
+            "categories": [{
+                "id": "12",
+                "title": "Smartphones",
+                "slug": "smartphones" 
+            }],
             "image": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
         },
         {
@@ -31,7 +39,11 @@ describe('getProductsFromCategorySlug', () => {
             "price": 1249,
             "stock": 36,
             "slug": "samsung-universe-9",
-            "categories": ["smartphones"],
+            "categories": [{
+                "id": "12",
+                "title": "Smartphones",
+                "slug": "smartphones" 
+            }],
             "image": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
         },
         {
@@ -41,7 +53,11 @@ describe('getProductsFromCategorySlug', () => {
             "price": 280,
             "stock": 123,
             "slug": "oppof19",
-            "categories": ["smartphones"],
+            "categories": [{
+                "id": "12",
+                "title": "Smartphones",
+                "slug": "smartphones" 
+            }],
             "image": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
         },
         {
@@ -51,7 +67,11 @@ describe('getProductsFromCategorySlug', () => {
             "price": 499,
             "stock": 32,
             "slug": "huawei-p30",
-            "categories": ["smartphones"],
+            "categories": [{
+                "id": "12",
+                "title": "Smartphones",
+                "slug": "smartphones" 
+            }],
             "image": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
         }])
     })

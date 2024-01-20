@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
 interface ProductImageProps {
-    src: string
+    src?: string
     alt: string
 }
 
-const ProductImage = ({ src, alt }: ProductImageProps) => {
+const ProductImage = ({ src = '', alt }: ProductImageProps) => {
 
     return (
         <div className="relative aspect-[5/4] overflow-hidden rounded-lg shadow-2xl">

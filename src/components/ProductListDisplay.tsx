@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import ProductListItem from './ProductListItem'
 
 interface ProductListDisplayProps {
     productList: Product[]
@@ -7,16 +7,13 @@ interface ProductListDisplayProps {
 const ProductListDisplay = ({ productList }: ProductListDisplayProps) => {
 
     return (
-        <div className="p-2 lg:p-4 bg-green-400">
-            {/* List */}                
-            {productList.map(product =>
-                <div key={product.id}>
-                    <p>productId: {product.id}</p>
-                    <p>productTitle: <Link href={`/product/${product.id}/${product.slug}`}>{product.title}</Link></p>
-                    <p>productPrice: {product.price}</p>
-                </div>
-            )}
-        </div>
+        <ol className="p-2 lg:p-4 flex flex-wrap">            
+            {productList.map(product => (
+                <li key={product.id} className="p-2 lg:p-4 basis-1/2 lg:basis-1/4">
+                    <ProductListItem product={product} />
+                </li>
+            ))}
+        </ol>
     )
 }
 

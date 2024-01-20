@@ -16,12 +16,6 @@ const useProductListControls = (products: Product[]) => {
     const initList = [...products]
     const productList: Product[] = [...filters.values()].reduce((list: Product[], filter: (product: Product) => boolean) => list.filter(filter), initList)
 
-    useEffect(() => {
-        console.log(`filters updated`)
-        console.log(filters)
-    }, [filters])
-
-
     return { productList, addFilter }
 }
 

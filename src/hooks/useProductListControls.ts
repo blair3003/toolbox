@@ -13,8 +13,8 @@ const useProductListControls = (products: Product[]) => {
 		setFilters(prevFilters => new Map(prevFilters).set(getKey, getFilter))
 	}
     
-    const productList = [...products]
-    const filteredList: Product[] = [...filters.values()].reduce((list: Product[], filter: (product: Product) => boolean) => list.filter(filter), productList)
+    const initList = [...products]
+    const productList: Product[] = [...filters.values()].reduce((list: Product[], filter: (product: Product) => boolean) => list.filter(filter), initList)
 
     useEffect(() => {
         console.log(`filters updated`)
@@ -22,7 +22,7 @@ const useProductListControls = (products: Product[]) => {
     }, [filters])
 
 
-    return { productList, filteredList, addFilter }
+    return { productList, addFilter }
 }
 
 export default useProductListControls

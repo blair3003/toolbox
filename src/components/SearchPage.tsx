@@ -14,7 +14,7 @@ const SearchPage = ({ searchTerm, products }: SearchPageProps) => {
     const { isDarkMode } = useThemeContext()
 
     return (
-        <div className={`${isDarkMode ? "text-white bg-black" : "text-black bg-white" }`}>
+        <div className={`${isDarkMode ? "text-white bg-dark-gradient" : "text-black bg-white" }`}>
             <div className="lg:max-w-screen-xl lg:mx-auto">
                 <section className="p-2 lg:p-4">
                     <header className="p-2 lg:p-4 mb-2 lg:mb-4 text-left lg:text-center">

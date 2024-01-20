@@ -4,8 +4,8 @@
 
 @layer utilities {
   .bg-dark-gradient {
-    background: radial-gradient(ellipse at top, #1c1917, transparent),
-            radial-gradient(ellipse at bottom, #0c0a09, transparent);
+    background: radial-gradient(ellipse at top, #0c0a09, transparent),
+            radial-gradient(ellipse at bottom, black, transparent);
   }
 }
 

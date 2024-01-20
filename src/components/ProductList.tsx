@@ -11,11 +11,11 @@ interface ProductListProps {
 
 const ProductList = ({ products }: ProductListProps) => {
 
-    const { productList, addFilter } = useProductListControls(products)
+    const { productList, ...rest } = useProductListControls(products)
 
     return (
         <div className="p-2 lg:p-4 flex flex-col gap:2 lg:gap-4 text-xs lg:text-base">
-            <ProductListControls productList={productList} addFilter={addFilter} />
+            <ProductListControls productList={productList} {...rest} />
             <ProductListDisplay productList={productList} />
             <ProductListPagination />
         </div>

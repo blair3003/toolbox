@@ -1,4 +1,4 @@
-const filterMap = new Map<string, (options: any) => {
+const filterBuilderMap = new Map<string, (options: any) => {
     getKey: string
     getFilter: (product: Product) => boolean
 }>([
@@ -12,4 +12,4 @@ const filterMap = new Map<string, (options: any) => {
     })]
 ])
 
-export default filterMap
+export default filterBuilderMap

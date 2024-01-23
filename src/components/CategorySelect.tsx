@@ -13,10 +13,26 @@ const CategorySelect = ({ categories, addFilter, close }: CategorySelectProps) =
 
     const { isDarkMode } = useThemeContext()
 	const [category, setCategory] = useState<Category | null>(null)
+    const [selection, setSelection] = useState('')
 
-	const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setCategory(categories.find(category => category.id === e.target.value) ?? null)        
-        close()
+    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelection(e.target.value)
+    }
+
+	const handleClick = () => {
+        if (selection) {
+            setCategory(categories.find(category => category.id === selection) ?? null)
+            setSelection('')
+            close()
+        }
+    }
+
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLSelectElement>) => {
+        if (selection && e.key === 'Enter') {
+            setCategory(categories.find(category => category.id === selection) ?? null)
+            setSelection('')
+            close()
+        }
     }
 
     useEffect(() => {
@@ -32,7 +48,9 @@ const CategorySelect = ({ categories, addFilter, close }: CategorySelectProps) =
 			<select
 				id="category-select"
 				onChange={handleChange}
-				value={category?.id ?? ''}
+                onClick={handleClick}
+                onKeyDown={handleKeyDown}
+				value={selection}
                 style={{ colorScheme: isDarkMode ? 'dark' : 'normal' }}
                 className="px-2 py-1 rounded-full cursor-pointer"
 			>

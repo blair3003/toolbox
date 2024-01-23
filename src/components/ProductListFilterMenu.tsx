@@ -11,12 +11,12 @@ interface ProductListFilterMenuProps {
 
 const ProductListFilterMenu = ({ productList, addFilter }: ProductListFilterMenuProps) => {
 
-	const { isOpen, toggle, ref } = useMenu()
+	const { isOpen, close, toggle, ref } = useMenu()
 
 	return (
-		<div className="relative">
-			<ProductListFilterListToggle toggle={toggle} toggleRef={ref} />
-			<ProductListFilterList isOpen={isOpen} productList={productList} addFilter={addFilter} />
+		<div className="relative" ref={ref as React.MutableRefObject<HTMLDivElement>}>
+			<ProductListFilterListToggle toggle={toggle} />
+			<ProductListFilterList isOpen={isOpen} close={close} productList={productList} addFilter={addFilter} />
 		</div>
 	)
 }

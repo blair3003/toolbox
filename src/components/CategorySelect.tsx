@@ -27,14 +27,6 @@ const CategorySelect = ({ categories, addFilter, close }: CategorySelectProps) =
         }
     }
 
-	const handleKeyDown = (e: React.KeyboardEvent<HTMLSelectElement>) => {
-        if (selection && e.key === 'Enter') {
-            setCategory(categories.find(category => category.id === selection) ?? null)
-            setSelection('')
-            close()
-        }
-    }
-
     useEffect(() => {
     	if (category) {
             addFilter('category', { category })
@@ -49,7 +41,6 @@ const CategorySelect = ({ categories, addFilter, close }: CategorySelectProps) =
 				id="category-select"
 				onChange={handleChange}
                 onClick={handleClick}
-                onKeyDown={handleKeyDown}
 				value={selection}
                 style={{ colorScheme: isDarkMode ? 'dark' : 'normal' }}
                 className="px-2 py-1 rounded-full cursor-pointer"

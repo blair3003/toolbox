@@ -36,7 +36,7 @@ const CategorySelect = ({ categories, addFilter, close }: CategorySelectProps) =
 
 	return (
 		<div className={`px-4 py-2 flex items-center gap-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-			<label htmlFor="category-select">Category:</label>
+			<label htmlFor="category-select" className="cursor-pointer">Category:</label>
 			<select
 				id="category-select"
 				onChange={handleChange}

@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { formatPrice } from '@/lib/formatPrice'
 
 const useFilterList = (productList: Product[]) => {
 
@@ -14,7 +15,26 @@ const useFilterList = (productList: Product[]) => {
 		return Array.from(categoriesMap.values()) as Category[]
 	}, [productList])
 
-	return { categories }
+	const priceRanges = useMemo(() => {		
+		if (productList.length < 2) return []
+		const priceList = productList.map(product => product.price).sort((a,b) => a - b)
+		const midPrice = priceList[Math.floor(priceList.length / 2)]
+		const midPriceRounded = Math.ceil(midPrice / 100) * 100
+		return [
+			{
+				label: `Price Range: 0 - ${formatPrice(midPriceRounded)}`,
+				low: 0,
+				high: midPriceRounded
+			},
+			{
+				label: `Price Range: More than ${formatPrice(midPriceRounded)}`,
+				low: midPriceRounded,
+				high: Infinity
+			}
+		]
+	}, [productList])
+
+	return { categories, priceRanges }
 }
 
 export default useFilterList

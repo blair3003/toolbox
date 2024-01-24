@@ -11,7 +11,7 @@ const useProductListControls = (products: Product[]) => {
 		const { getKey, getFilter } = filterFunction(options)
 		if (!getKey || !getFilter) return
 		setFilters(prevFilters => new Map(prevFilters).set(getKey, getFilter))
-	}, [filterBuilderMap, setFilters])
+	}, [setFilters])
 
     const removeFilter = useCallback((filter: string) => {
         if (!filterMap.has(filter)) return

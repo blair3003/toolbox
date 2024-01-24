@@ -28,14 +28,3 @@ type Account = {
     name: string
     cart: Cart
 }
-
-type CategoryFilter = {
-    category: Category
-}
-
-type PriceRangeFilter = {
-    low: number
-    high: number
-}
-
-type FilterMap = Map<string, (product: Product) => boolean>

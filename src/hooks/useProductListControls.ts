@@ -3,7 +3,7 @@ import filterBuilderMap from '@/util/filterBuilderMap'
 
 const useProductListControls = (products: Product[]) => {
 
-    const [filterMap, setFilters] = useState<FilterMap>(new Map())
+    const [filterMap, setFilters] = useState(new Map<string, (product: Product) => boolean>())
     
     const addFilter = useCallback((filter: string, options: any) => {
         const filterFunction = filterBuilderMap.get(filter)

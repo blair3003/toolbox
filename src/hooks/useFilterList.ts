@@ -22,7 +22,7 @@ const useFilterList = (productList: Product[]) => {
 		const midPriceRounded = Math.ceil(midPrice / 100) * 100
 		return [
 			{
-				label: `Price Range: 0 - ${formatPrice(midPriceRounded)}`,
+				label: `Price Range: $0 - ${formatPrice(midPriceRounded)}`,
 				low: 0,
 				high: midPriceRounded
 			},

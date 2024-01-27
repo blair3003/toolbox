@@ -1,13 +1,21 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 const useProductListPagination = (productList: Product[]) => {
 
     const [page, setPage] = useState(1)
     const [productsPerPage, setProductsPerPage] = useState(2)
 
+    useEffect(() => setPage(1), [productList])
+
     const pageCount = useMemo(() => Math.ceil(productList.length / productsPerPage), [productList, productsPerPage])
 
-    const paginatedProducts = [...productList] // TODO
+    const paginatedProducts = useMemo(() => (
+        productList.reduce((paginated, product, index) => {
+            const page = Math.floor(index / productsPerPage) + 1
+            paginated.set(page, [...(paginated.get(page) || []), product])
+            return paginated
+        }, new Map())
+    ), [productsPerPage, productList])
 
     const changePage = (no: number) => {
         setPage(no)

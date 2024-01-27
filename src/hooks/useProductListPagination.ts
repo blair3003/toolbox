@@ -4,6 +4,7 @@ const useProductListPagination = (productList: Product[]) => {
 
     const [page, setPage] = useState(1)
     const [productsPerPage, setProductsPerPage] = useState(2)
+    const pageBlock = 3 
 
     useEffect(() => setPage(1), [productList])
 
@@ -17,8 +18,12 @@ const useProductListPagination = (productList: Product[]) => {
         }, new Map())
     ), [productsPerPage, productList])
 
-    const changePage = (no: number) => {
-        setPage(no)
+    const changePage = (pageNo: number) => {
+        setPage(Math.min(Math.max(pageNo, 1), pageCount))
+    }
+
+    const nextBlock = () => {
+        setPage(currPage => Math.min(Math.max(currPage + pageBlock, 1), pageCount))
     }
 
     const nextPage = () => {
@@ -29,7 +34,7 @@ const useProductListPagination = (productList: Product[]) => {
         setPage(currPage => currPage > 1 ? currPage - 1 : 1)
     }
 
-    return { paginatedProducts, page, pageCount, changePage, nextPage, prevPage }
+    return { paginatedProducts, page, pageBlock, pageCount, changePage, nextBlock, nextPage, prevPage }
 }
 
 export default useProductListPagination

@@ -8,7 +8,7 @@ interface ProductListDisplayProps {
 
 const ProductListDisplay = ({ productList }: ProductListDisplayProps) => {
 
-    const { paginatedProducts, page, pageCount, changePage, nextPage, prevPage } = useProductListPagination(productList)
+    const { paginatedProducts, page, pageCount, pageBlock, changePage, nextBlock, nextPage, prevPage } = useProductListPagination(productList)
 
     return (
         <div className="p-2 lg:p-4">
@@ -19,7 +19,7 @@ const ProductListDisplay = ({ productList }: ProductListDisplayProps) => {
                     </li>
                 ))}
             </ol>
-            <ProductListPagination page={page} pageCount={pageCount} changePage={changePage} nextPage={nextPage} prevPage={prevPage} />
+            <ProductListPagination page={page} pageCount={pageCount} pageBlock={pageBlock} changePage={changePage} nextBlock={nextBlock} nextPage={nextPage} prevPage={prevPage} />
         </div>
     )
 }

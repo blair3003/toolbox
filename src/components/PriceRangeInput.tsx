@@ -39,6 +39,7 @@ const PriceRangeInput = ({ addFilter, close }: PriceRangeInputProps) => {
 				<input
 					id="price-range-low"
 					type="number"
+					placeholder="$"
                     value={low ?? ''}
 					onBlur={handleBlur}
                     onKeyDown={handleKeyDown}
@@ -52,6 +53,7 @@ const PriceRangeInput = ({ addFilter, close }: PriceRangeInputProps) => {
 				<input
 					id="price-range-high"
 					type="number"
+					placeholder="$"
                     value={high ?? ''}
 					onBlur={handleBlur}
                     onKeyDown={handleKeyDown}

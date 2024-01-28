@@ -19,9 +19,11 @@ const ProductListFilterList = ({ isOpen, close, productList, addFilter }: Produc
 	return (
 
 		<ul className={`absolute z-50 mt-4 py-2 rounded shadow-2xl border-2 ${isOpen ? 'block' : 'hidden'} ${isDarkMode ? 'bg-stone-600 border-stone-700' : 'bg-stone-300 border-stone-400'}`}>
-			<li>
-				<CategorySelect categories={categories} addFilter={addFilter} close={close} />
-			</li>
+			{categories.length ?
+				<li>
+					<CategorySelect categories={categories} addFilter={addFilter} close={close} />
+				</li>
+			: null}
 			{priceRanges.map((priceRange, index) =>
 				<li key={index}>
 					<PriceRangeButton priceRange={priceRange} addFilter={addFilter} close={close} />

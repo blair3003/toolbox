@@ -11,7 +11,7 @@ export default async function Search({ searchParams }: { searchParams: { q: stri
 
     return (
         <main>
-            <SearchPage searchTerm={searchTerm} products={products}/>
+            <SearchPage searchTerm={searchTerm} products={products} />
         </main>
     )
 }

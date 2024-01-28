@@ -6,7 +6,7 @@ const useFilterList = (productList: Product[]) => {
 	const categories = useMemo(() => {
 		const categoriesMap = new Map<string, Category>()
 		productList.forEach(product => {
-			product.categories.forEach(category => {
+			product.categories?.forEach(category => {
 				if (!categoriesMap.has(category.id)) {
 					categoriesMap.set(category.id, category)
 				}

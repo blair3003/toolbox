@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react'
 const useProductListPagination = (productList: Product[]) => {
 
     const [page, setPage] = useState(1)
-    const [productsPerPage, setProductsPerPage] = useState(4)
+    const [productsPerPage, setProductsPerPage] = useState(8)
     const pageBlock = 3 
 
     useEffect(() => setPage(1), [productList])

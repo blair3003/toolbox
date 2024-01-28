@@ -1,5 +1,6 @@
 'use client'
 
+import { useCartContext } from '@/context/CartProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
 
 interface AddToCartFormProps {
@@ -9,9 +10,13 @@ interface AddToCartFormProps {
 const AddToCartForm = ({ product }: AddToCartFormProps) => {
 
     const { isDarkMode } = useThemeContext()
+    const { addItemToCart } = useCartContext()
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
+        console.log(`adding to cart!`)
+        addItemToCart(product)
+
 
     }
 

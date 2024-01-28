@@ -34,6 +34,10 @@ const useAccount = () => {
         }        
     }, [account, effectRanOnceRef])
 
+    useEffect(() => {
+        if (account) console.log(account)     
+    }, [account])
+
     return { account, setAccountCart }
 }
 

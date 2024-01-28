@@ -1,11 +1,11 @@
 type Product = {
     id: string
     title: string
-    description?: string
-    slug?: string
-    categories: Category[]
-    image?: string
     price: number
+    slug: string
+    image: string
+    description?: string
+    categories?: Category[]
 }
 
 type Cart = {
@@ -26,5 +26,6 @@ type Account = {
     id: string
     uid: string
     name: string
+    favorites: Product[]
     cart: Cart
 }

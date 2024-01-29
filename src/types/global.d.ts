@@ -26,6 +26,8 @@ type Account = {
     id: string
     uid: string
     name: string
-    favorites: Product[]
+    favorites: {
+        [product: string]: Product
+    }
     cart: Cart
 }

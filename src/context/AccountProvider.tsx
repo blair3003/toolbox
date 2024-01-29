@@ -6,6 +6,9 @@ import useAccount from '@/hooks/useAccount'
 interface AccountContextType {
     account: Account | null
 	setAccountCart: (cart: Cart | null) => void
+	favorites: Product[]
+	addToFavorites: (product: Product) => void
+	removeFromFavorites: (product: Product) => void
 }
 
 const AccountContext = createContext({})

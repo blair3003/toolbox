@@ -4,14 +4,14 @@
         "uid": "1",
         "name": "Blair",
         "cart": {},
-        "favorites": [
-            {
+        "favorites": {
+            "1": {
                 "id": "1",
                 "title": "iPhone 9",
                 "price": 549,
                 "slug": "iphone-9",
                 "image": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
             }
-        ]
+        }
     }
 ]

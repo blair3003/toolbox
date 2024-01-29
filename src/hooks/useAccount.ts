@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useAuthContext } from '@/context/AuthProvider'
 
 const useAccount = () => {
@@ -7,9 +7,23 @@ const useAccount = () => {
     const [account, setAccount] = useState<Account | null>(null)
     const effectRanOnceRef = useRef(false)
 
+    const favorites = useMemo(() => Object.values(account?.favorites || []), [account])
+
     const setAccountCart = useCallback((cart: Cart | null) => {
         setAccount(account => account ? cart ? ({ ...account, cart }) : ({ ...account, cart: {} }) : null)
     }, [])
+
+    const addToFavorites = useCallback((product: Product) => {
+        if (account?.favorites[product.id]) return
+        const favorites = { ...account?.favorites, [product.id]: product }
+        setAccount(account => account ? ({ ...account, favorites }) : null)
+    }, [account])
+
+    const removeFromFavorites = useCallback((product: Product) => {
+        if (!account?.favorites[product.id]) return
+        const { [product.id]: _, ...favorites } = account.favorites
+        setAccount(account => account ? ({ ...account, favorites }) : null)
+    }, [account])
     
     useEffect(() => {
         const fetchAccount = async (uid: string) => {
@@ -38,7 +52,7 @@ const useAccount = () => {
         if (account) console.log(account)     
     }, [account])
 
-    return { account, setAccountCart }
+    return { account, setAccountCart, favorites, addToFavorites, removeFromFavorites }
 }
 
 export default useAccount

@@ -1,6 +1,7 @@
 'use client'
 
 import { useCartContext } from '@/context/CartProvider'
+import { HiMiniTrash } from 'react-icons/hi2'
 
 interface RemoveFromCartButtonProps {
     product: Product
@@ -12,7 +13,8 @@ const RemoveFromCartButton = ({ product }: RemoveFromCartButtonProps) => {
 
     return (
         <button onClick={() => removeItemFromCart(product)}>
-            Remove from Cart
+            <span className="sr-only">Remove from Cart</span>
+            <HiMiniTrash />
         </button>
     )
 }

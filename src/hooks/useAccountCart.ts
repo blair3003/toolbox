@@ -1,3 +1,5 @@
+'use client'
+
 import { useAccountContext } from '@/context/AccountProvider'
 import useCart from './useCart'
 import { useCallback, useEffect, useRef } from 'react'

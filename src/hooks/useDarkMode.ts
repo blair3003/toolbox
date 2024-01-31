@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-const LOCAL_STORAGE_KEY = 'darkMode'
+const LOCAL_STORAGE_KEY = 'toolbox-dark-mode'
 
 const useDarkMode = () => {
 

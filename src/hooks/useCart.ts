@@ -1,8 +1,11 @@
+'use client'
+
 import { useCallback, useMemo, useState } from 'react'
+import useLocalCart from './useLocalCart'
 
 const useCart = () => {
 
-    const [cart, setCart] = useState<Cart>({})
+    const { cart, setCart } = useLocalCart()
 
     const total = useMemo(() => {
         return Object.values(cart).reduce((total, item) => total + (item.product.price * item.quantity), 0)

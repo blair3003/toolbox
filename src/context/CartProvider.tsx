@@ -5,8 +5,13 @@ import useAccountCart from '@/hooks/useAccountCart'
 
 interface CartContextType {
     cart: Cart | null
-    total: number
     count: number
+	gross: number
+	discount: number
+	subtotal: number
+	tax: number
+	delivery: number
+	total: number
     addItemToCart: (product: Product, quantity?: number) => void
 	removeItemFromCart: (product: Product) => void
 	updateItemQuantity: (product: Product, quantity: number) => void

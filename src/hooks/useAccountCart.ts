@@ -7,7 +7,7 @@ import { useCallback, useEffect, useRef } from 'react'
 const useAccountCart = () => {
 
     const { account, setAccountCart } = useAccountContext()
-    const { cart, total, count, addItemToCart, removeItemFromCart, updateItemQuantity, clearCart, setCart } = useCart()
+    const { cart, clearCart, setCart, ...rest } = useCart()
     const accountCartLoadedRef = useRef(false)
 
     const mergeCarts = useCallback((carts: Cart[]) => {
@@ -38,7 +38,7 @@ const useAccountCart = () => {
         setAccountCart(cart)
     }, [cart, setAccountCart])
 
-    return { cart, total, count, addItemToCart, removeItemFromCart, updateItemQuantity, clearCart }
+    return { cart, clearCart, ...rest }
 }
 
 export default useAccountCart

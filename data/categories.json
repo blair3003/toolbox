@@ -1,103 +1,62 @@
 [
     {
         "id": "1",
-        "title": "Automotive",
-        "description": "All about those 4 wheels and drive",
-        "slug": "automotive" 
+        "title": "Tools",
+        "slug": "tools",
+        "description": "Tools are vital to all commercial trades and domestic users undertaking projects at home. Without a good tool shop it would be difficult to complete both simple and more complex construction or home improvements. Anyone serious about manual labour would need the basic tools for trade and can progressively invest in additional equipment and accessories as jobs require it."
     },
     {
         "id": "2",
-        "title": "Fragrances",
-        "slug": "fragrances" 
+        "title": "Heating & Plumbing",
+        "slug": "heating-plumbing",
+        "description": "Heating and plumbing materials cover a wide variety of supplies for plumbers, heating engineers and domestic users." 
     },
     {
         "id": "3",
-        "title": "Furniture",
-        "slug": "furniture" 
+        "title": "Electrical & Lighting",
+        "slug": "electrical-lighting",
+        "description": "Electrical and lighting are essential components in any building, whether a residential property, commercial unit or industrial site. Choosing the right products for the application is vital to ensure they operate smoothly and at their full capacity. A huge range of electrical supplies are available to suit all needs and type of installation, all of which are designed and constructed to the highest standards and conform with current legislation." 
     },
     {
         "id": "4",
-        "title": "Groceries",
-        "slug": "groceries" 
+        "title": "Bathrooms & Kitchens",
+        "slug": "bathrooms-kitchens",
+        "description": "" 
     },
     {
         "id": "5",
-        "title": "Home Decoration",
-        "slug": "home-decoration" 
+        "title": "Outdoor & Gardening",
+        "slug": "outdoor-gardening",
+        "description": "Our outdoor & gardening range has everything to make an outdoor space beautiful and functional. From hand tools to garden sheds, we've got you covered. If gardening is your passion, we've got a wide variety of tools to make your green thumb even greener. Our selection includes everything from basic shovels and hoes to top-of-the-range power tools like lawnmowers and chainsaws. If you want to take on a garden project, we're sure to have the materials you're looking for. When it comes to outdoor living, we've got you covered too. Check out our selection of furniture and outdoor space cosy and inviting. Explore our outdoor &amp; garden range today and take an outdoor space to the next level."
     },
     {
         "id": "6",
-        "title": "Laptops",
-        "slug": "laptops" 
+        "title": "Screws, Nails & Fixings",
+        "slug": "screws-nails-fixings",
+        "description": "There are plenty of screws, nails and fixings available that are suitable for a wide range of applications."
     },
     {
         "id": "7",
-        "title": "Lighting",
-        "slug": "lighting" 
+        "title": "Security & Ironmongery",
+        "slug": "security-ironmongery",
+        "description": "Security and ironmongery encompasses a wide field of products and services for both domestic and commercial customers. Hardware can be used as a security precaution but it can also be used as a decorative feature for both traditional and contemporary properties. The range of products includes something for every type of project." 
     },
     {
         "id": "8",
-        "title": "Mens Shirts",
-        "slug": "mens-shirts" 
+        "title": "Building & Doors",
+        "slug": "building-doors",
+        "description": "" 
     },
     {
         "id": "9",
-        "title": "Mens Watches",
-        "slug": "mens-watches" 
+        "title": "Safety & Workwear",
+        "slug": "safety-workwear",
+        "description": "" 
     },
     {
         "id": "10",
-        "title": "Motorcycle",
-        "slug": "motorcycle" 
-    },
-    {
-        "id": "11",
-        "title": "Skincare",
-        "slug": "skincare" 
-    },
-    {
-        "id": "12",
-        "title": "Smartphones",
-        "slug": "smartphones" 
-    },
-    {
-        "id": "13",
-        "title": "Sunglasses",
-        "slug": "sunglasses" 
-    },
-    {
-        "id": "14",
-        "title": "Tops",
-        "slug": "tops" 
-    },
-    {
-        "id": "15",
-        "title": "Womens Bags",
-        "slug": "womens-bags" 
-    },
-    {
-        "id": "16",
-        "title": "Womens Dresses",
-        "slug": "womens-dresses" 
-    },
-    {
-        "id": "17",
-        "title": "Womens Jewellery",
-        "slug": "womens-jewellery" 
-    },
-    {
-        "id": "18",
-        "title": "Womens Shoes",
-        "slug": "womens-shoes" 
-    },
-    {
-        "id": "19",
-        "title": "Womens Watches",
-        "slug": "womens-watches" 
-    },
-    {
-        "id": "20",
-        "title": "Mens Shoes",
-        "slug": "mens-shoes" 
+        "title": "Sealants & Adhesives",
+        "slug": "sealants-adhesives",
+        "description": "" 
     }
 ]

@@ -6,7 +6,7 @@ const filterBuilderMap = new Map<string, (options: any) => {
 }>([
     ['category', ({ category: { title, slug } }: { category: Category }) => ({
         getKey: `Category: ${title}`,
-        getFilter: (product: Product) => product.categories.some(category => category.slug === slug) ?? false
+        getFilter: (product: Product) => product.categories?.some(category => category.slug === slug) ?? false
     })],
     ['priceRange', ({ low, high }: { low: number; high: number }) => ({
         getKey: `Price Range: ${high === Infinity ? `More than ${formatPrice(low)}` : `${formatPrice(low)} - ${formatPrice(high)}`}`,

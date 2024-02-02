@@ -36,7 +36,7 @@ const RemoveFromCartButton = ({ product }: RemoveFromCartButtonProps) => {
                 className={`p-2 lg:p-4 rounded-lg ${isDarkMode ? "" : ""}`}
             >
                 <p className="mb-2 lg:mb-4">Remove item from cart?</p>
-                <div className="flex items-center justify-end">
+                <div className="flex items-center justify-around gap-2 lg:gap-4">
                     <button
                         type="button"
                         onClick={handleRemoveItem}

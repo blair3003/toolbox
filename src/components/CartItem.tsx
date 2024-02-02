@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { formatPrice } from '@/lib/formatPrice'
 import ProductImage from './ProductImage'
 import RemoveFromCartButton from './RemoveFromCartButton'
@@ -17,7 +18,9 @@ const CartItem = ({ item: { product, quantity } }: CartItemProps) => {
     return (
         <div className="p-2 lg:p-4 mb-2 lg:mb-4 flex flex-nowrap gap-2 lg:gap-4 rounded-lg border-2 border-stone-300">
             <div className="basis-1/3">
-                <ProductImage src={product.image} alt={product.title} />
+                <Link href={`/product/${product.id}/${product.slug}`}>
+                    <ProductImage src={product.image} alt={product.title} />
+                </Link>
             </div>
             <div className="grow flex flex-col">
                 <div className="grow flex items-start justify-between">

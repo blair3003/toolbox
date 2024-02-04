@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { HiArrowRightOnRectangle, HiUser } from 'react-icons/hi2'
+import { HiArrowRightOnRectangle, HiShoppingCart } from 'react-icons/hi2'
 import { useAccountContext } from '@/context/AccountProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
 import DarkModeToggle from './DarkModeToggle'
@@ -19,16 +19,16 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 		<ol className={`absolute z-50 right-0 mt-4 py-2 rounded shadow-2xl border-2 ${isOpen ? 'block' : 'hidden'} ${isDarkMode ? 'bg-stone-600 border-stone-700' : 'bg-stone-100 border-stone-200'}`}>
 			<li>
 				<Link
-					href={`/profile/${account.id}`}
+					href={`/cart`}
 					className={`block px-4 py-2 text-nowrap ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : 'text-black hover:bg-stone-200 focus:bg-stone-200'}`}
 				>
 					<div className="flex items-center gap-2">
                         <div className="h-8 w-8 text-2xl grid place-content-center">
-						    <HiUser />
+						    <HiShoppingCart />
                         </div>
 						<div>
 							<span className="block font-bold">{account.name}</span>
-							<span className="block">View your profile</span>							
+							<span className="block">View your cart</span>							
 						</div>
 					</div>
 				</Link>

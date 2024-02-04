@@ -26,7 +26,7 @@ type Category = {
 }
 
 type Account = {
-    id?: string
+    id: string
     uid: string
     name: string
     favorites: {

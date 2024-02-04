@@ -7,11 +7,16 @@ export const getAccount = async (authUser: FirebaseUser): Promise<Account | unde
     try {
         const q = query(accountCollectionRef, where('uid', '==', authUser.uid))
         const querySnapshot = await getDocs(q)
-        if (!querySnapshot.empty) return querySnapshot.docs[0].data() as Account
+        if (!querySnapshot.empty) {
+            const doc = querySnapshot.docs[0]
+            return { id: doc.id, ...doc.data() } as Account
+        }
 
         const newAccountRef = await addDoc(accountCollectionRef, { uid: authUser.uid, name: authUser.displayName, favorites: {}, cart: {} })
         const newAccountDoc = await getDoc(newAccountRef)
-        if (newAccountDoc.exists()) return newAccountDoc.data() as Account
+        if (newAccountDoc.exists()) {
+            return { id: newAccountDoc.id, ...newAccountDoc.data() } as Account
+        }
         
         throw new Error(`New account error`)
         

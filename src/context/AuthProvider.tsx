@@ -3,15 +3,8 @@
 import { createContext, useContext } from 'react'
 import useAuth from '@/hooks/useAuth'
 
-// interface AuthContextType {
-//     authUser: FirebaseUser | null
-//     pending: boolean
-// }
-
 interface AuthContextType {
-    authUser: { uid: string, name: string } | null
-	setAuthUserToNull: () => void
-	setAuthUserToTest: () => void
+    authUser: FirebaseUser | null
     pending: boolean
 }
 

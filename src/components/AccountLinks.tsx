@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import { HiArrowRightOnRectangle, HiUser } from 'react-icons/hi2'
 import { useAccountContext } from '@/context/AccountProvider'
-import { useAuthContext } from '@/context/AuthProvider'
-import DarkModeToggle from './DarkModeToggle'
 import { useThemeContext } from '@/context/ThemeProvider'
+import DarkModeToggle from './DarkModeToggle'
 
 interface AccountLinksProps {
 	isOpen: boolean
@@ -12,7 +11,6 @@ interface AccountLinksProps {
 const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 
 	const { account } = useAccountContext()
-	const { setAuthUserToNull } = useAuthContext()
     const { isDarkMode } = useThemeContext()
 	
 	if (!account) return null
@@ -36,19 +34,8 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 				</Link>
 			</li>
 			<li>
-				{/* <Link
+				<Link
 					href="/logout"
-					className="block text-stone-700 hover:bg-stone-200 focus:bg-stone-200 px-4 py-2 text-nowrap"
-				>
-					<div className="flex items-center gap-2">
-                        <div className="h-8 w-8 text-2xl grid place-content-center">
-                            <CiLogout />
-                        </div>						
-						<span>Sign out</span>
-					</div>
-				</Link> */}
-				<button
-					onClick={setAuthUserToNull}
 					className={`block w-full px-4 py-2 text-nowrap ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : 'text-black hover:bg-stone-200 focus:bg-stone-200'}`}
 				>
 					<div className="flex items-center gap-2">
@@ -57,8 +44,7 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
                         </div>						
 						<span>Sign out</span>
 					</div>
-				</button>
-
+				</Link>
 			</li>
 			<li>
 				<DarkModeToggle/>

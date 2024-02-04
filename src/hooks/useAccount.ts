@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useAuthContext } from '@/context/AuthProvider'
+import { getAccount } from '@/lib/firestore/getAccount'
 
 const useAccount = () => {
 
@@ -26,17 +27,12 @@ const useAccount = () => {
     }, [account])
     
     useEffect(() => {
-        const fetchAccount = async (uid: string) => {
-            try {
-                const response = await fetch(`http://localhost:3000/api/accounts/${uid}`)
-                const data: Account = await response.json()
-                if (data) setAccount(data)
-            } catch (err) {
-                console.error(err)
-            }
+        const fetchAccount = async (authUser: FirebaseUser) => {
+            const account = await getAccount(authUser)
+            if (account) setAccount(account)
         }
         authUser
-            ? fetchAccount(authUser.uid)
+            ? fetchAccount(authUser)
             : setAccount(null)
     }, [authUser])
 
@@ -47,10 +43,6 @@ const useAccount = () => {
                 : effectRanOnceRef.current = true
         }        
     }, [account, effectRanOnceRef])
-
-    useEffect(() => {
-        if (account) console.log(account)     
-    }, [account])
 
     return { account, setAccountCart, favorites, addToFavorites, removeFromFavorites }
 }

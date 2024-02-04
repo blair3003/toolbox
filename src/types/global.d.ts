@@ -1,3 +1,5 @@
+type FirebaseUser = import('firebase/auth').User
+
 type Product = {
     id: string
     title: string
@@ -24,7 +26,7 @@ type Category = {
 }
 
 type Account = {
-    id: string
+    id?: string
     uid: string
     name: string
     favorites: {

@@ -2,12 +2,10 @@
 
 import Link from 'next/link'
 import { HiUser } from 'react-icons/hi2'
-import { useAuthContext } from '@/context/AuthProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
 
 const SignInLink = () => {
 
-    const { setAuthUserToTest } = useAuthContext()
     const { isDarkMode } = useThemeContext()
 
 	return (

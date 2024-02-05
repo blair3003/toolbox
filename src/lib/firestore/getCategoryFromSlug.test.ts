@@ -1,6 +1,6 @@
 import getCategoryFromSlug from './getCategoryFromSlug'
 
-const slug = 'automotive'
+const slug = 'tools'
 const unknownSlug = 'unknown'
 
 describe('getCategoryFromSlug', () => {
@@ -9,9 +9,9 @@ describe('getCategoryFromSlug', () => {
         const result = await getCategoryFromSlug(slug)
         expect(result).toEqual({
             "id": "1",
-            "title": "Automotive",
-            "description": "All about those 4 wheels and drive",
-            "slug": "automotive" 
+            "title": "Tools",
+            "slug": "tools",
+            "description": "Tools are vital to all commercial trades and domestic users undertaking projects at home. Without a good tool shop it would be difficult to complete both simple and more complex construction or home improvements. Anyone serious about manual labour would need the basic tools for trade and can progressively invest in additional equipment and accessories as jobs require it."
         })
     })
 

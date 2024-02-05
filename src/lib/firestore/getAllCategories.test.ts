@@ -4,7 +4,7 @@ describe('getAllCategories', () => {
 
     it('should return an array of categories', async () => {
         const result = await getAllCategories()
-        expect(result).toHaveLength(20)
+        expect(result).toHaveLength(10)
     })
 
 })

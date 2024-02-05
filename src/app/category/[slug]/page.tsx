@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import getProductsFromCategorySlug from '@/lib/getProductsFromCategorySlug'
-import getAllCategories from '@/lib/getAllCategories'
-import getCategoryFromSlug from '@/lib/getCategoryFromSlug'
+import getAllCategories from '@/lib/firestore/getAllCategories'
+import getCategoryFromSlug from '@/lib/firestore/getCategoryFromSlug'
 import CategoryPage from '@/components/CategoryPage'
 
 export async function generateStaticParams() {

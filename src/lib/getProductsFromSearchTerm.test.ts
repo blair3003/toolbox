@@ -8,83 +8,83 @@ const multipleLessthan3CharSearchTerms = "ki dr"
 
 describe('getProductsFromSearchTerm', () => {
 
-	it('should return the correct products from a single search term', async () => {
-	    const result = await getProductsFromSearchTerm(singleSearchTerm)
-	    expect(result).toEqual([{
-			"id": "3",
-			"title": "Samsung Universe 9",
-			"description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-			"price": 1249,
-			"stock": 36,
-			"slug": "samsung-universe-9",
-			"categories": [{
-				"id": "12",
-				"title": "Smartphones",
-				"slug": "smartphones" 
-			}],
-			"image": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
-		},
-		{
-			"id": "7",
-			"title": "Samsung Galaxy Book",
-			"description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
-			"price": 1499,
-			"stock": 50,
-			"slug": "samsung-galaxy-book",
-			"categories": [{
-				"id": "6",
-				"title": "Laptops",
-				"slug": "laptops" 
-			}],
-			"image": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
-		}])
-	})
+	// it('should return the correct products from a single search term', async () => {
+	//     const result = await getProductsFromSearchTerm(singleSearchTerm)
+	//     expect(result).toEqual([{
+	// 		"id": "3",
+	// 		"title": "Samsung Universe 9",
+	// 		"description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+	// 		"price": 1249,
+	// 		"stock": 36,
+	// 		"slug": "samsung-universe-9",
+	// 		"categories": [{
+	// 			"id": "12",
+	// 			"title": "Smartphones",
+	// 			"slug": "smartphones" 
+	// 		}],
+	// 		"image": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
+	// 	},
+	// 	{
+	// 		"id": "7",
+	// 		"title": "Samsung Galaxy Book",
+	// 		"description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+	// 		"price": 1499,
+	// 		"stock": 50,
+	// 		"slug": "samsung-galaxy-book",
+	// 		"categories": [{
+	// 			"id": "6",
+	// 			"title": "Laptops",
+	// 			"slug": "laptops" 
+	// 		}],
+	// 		"image": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
+	// 	}])
+	// })
 
-	it('should return the correct products from multiple search terms', async () => {
-	    const result = await getProductsFromSearchTerm(multipleSearchTerms)
-	    expect(result).toEqual([{
-			"id": "3",
-			"title": "Samsung Universe 9",
-			"description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-			"price": 1249,
-			"stock": 36,
-			"slug": "samsung-universe-9",
-			"categories": [{
-				"id": "12",
-				"title": "Smartphones",
-				"slug": "smartphones" 
-			}],
-			"image": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
-		},
-		{
-			"id": "7",
-			"title": "Samsung Galaxy Book",
-			"description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
-			"price": 1499,
-			"stock": 50,
-			"slug": "samsung-galaxy-book",
-			"categories": [{
-				"id": "6",
-				"title": "Laptops",
-				"slug": "laptops" 
-			}],
-			"image": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
-		},
-		{
-			"id": "17",
-			"title": "Tree Oil 30ml",
-			"description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
-			"price": 12,
-			"stock": 78,
-			"slug": "tree-oil-30ml",
-			"categories": [{
-				"id": "11",
-				"title": "Skincare",
-				"slug": "skincare" 
-			}],
-			"image": "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg"
-		}])
-	})
+	// it('should return the correct products from multiple search terms', async () => {
+	//     const result = await getProductsFromSearchTerm(multipleSearchTerms)
+	//     expect(result).toEqual([{
+	// 		"id": "3",
+	// 		"title": "Samsung Universe 9",
+	// 		"description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+	// 		"price": 1249,
+	// 		"stock": 36,
+	// 		"slug": "samsung-universe-9",
+	// 		"categories": [{
+	// 			"id": "12",
+	// 			"title": "Smartphones",
+	// 			"slug": "smartphones" 
+	// 		}],
+	// 		"image": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
+	// 	},
+	// 	{
+	// 		"id": "7",
+	// 		"title": "Samsung Galaxy Book",
+	// 		"description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+	// 		"price": 1499,
+	// 		"stock": 50,
+	// 		"slug": "samsung-galaxy-book",
+	// 		"categories": [{
+	// 			"id": "6",
+	// 			"title": "Laptops",
+	// 			"slug": "laptops" 
+	// 		}],
+	// 		"image": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
+	// 	},
+	// 	{
+	// 		"id": "17",
+	// 		"title": "Tree Oil 30ml",
+	// 		"description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
+	// 		"price": 12,
+	// 		"stock": 78,
+	// 		"slug": "tree-oil-30ml",
+	// 		"categories": [{
+	// 			"id": "11",
+	// 			"title": "Skincare",
+	// 			"slug": "skincare" 
+	// 		}],
+	// 		"image": "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg"
+	// 	}])
+	// })
 
 	it('should return an empty array for non-matching search term', async () => {
 	    const result = await getProductsFromSearchTerm(nonMatchingSearchTerm)

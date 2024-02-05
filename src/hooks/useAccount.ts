@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useAuthContext } from '@/context/AuthProvider'
 import { getAccount } from '@/lib/firestore/getAccount'
+import updateAccount from '@/lib/firestore/updateAccount'
 
 const useAccount = () => {
 
@@ -39,7 +40,7 @@ const useAccount = () => {
     useEffect(() => {
         if (account) {
             effectRanOnceRef.current
-                ? console.log(`updating server`)
+                ? updateAccount(account)
                 : effectRanOnceRef.current = true
         }        
     }, [account, effectRanOnceRef])

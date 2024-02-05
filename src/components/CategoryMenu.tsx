@@ -1,4 +1,4 @@
-import getAllCategories from '@/lib/getAllCategories'
+import getAllCategories from '@/lib/firestore/getAllCategories'
 import CategoryNav from './CategoryNav'
 
 const CategoryMenu = async () => {

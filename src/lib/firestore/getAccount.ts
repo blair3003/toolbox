@@ -1,9 +1,10 @@
 import { addDoc, collection, getDoc, getDocs, query, where } from 'firebase/firestore'
 import { db } from '@/config/firebase'
 
-export const accountCollectionRef = collection(db, 'accounts')
-
 export const getAccount = async (authUser: FirebaseUser): Promise<Account | undefined> => {
+
+    const accountCollectionRef = collection(db, 'accounts')
+
     try {
         const q = query(accountCollectionRef, where('uid', '==', authUser.uid))
         const querySnapshot = await getDocs(q)

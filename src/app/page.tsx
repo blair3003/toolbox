@@ -1,5 +1,5 @@
 import HomePage from '@/components/HomePage'
-import getAllProducts from '@/lib/getAllProducts'
+import getAllProducts from '@/lib/firestore/getAllProducts'
 
 export default async function Home() {
 

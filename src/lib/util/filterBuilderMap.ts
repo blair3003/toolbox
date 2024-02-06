@@ -1,4 +1,4 @@
-import { formatPrice } from '@/lib/formatPrice';
+import formatPrice from './formatPrice'
 
 const filterBuilderMap = new Map<string, (options: any) => {
     getKey: string

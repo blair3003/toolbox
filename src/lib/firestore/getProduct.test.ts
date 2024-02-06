@@ -16,7 +16,7 @@ describe('getProduct', () => {
                 "title": "Tools",
                 "slug": "tools" 
             }],
-            "image": "http://localhost:3000/img/1.jpg"
+            "image": "img/1.jpg"
         })
     })
 

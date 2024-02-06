@@ -1,4 +1,4 @@
-import getAllProducts from './getAllProducts'
+import getAllProducts from '../firestore/getAllProducts'
 
 describe('getAllProducts', () => {
 

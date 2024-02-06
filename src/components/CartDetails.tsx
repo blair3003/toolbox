@@ -1,6 +1,6 @@
 import { useCartContext } from '@/context/CartProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
-import { formatPrice } from '@/lib/formatPrice'
+import formatPrice from '@/lib/util/formatPrice'
 import Link from 'next/link'
 
 

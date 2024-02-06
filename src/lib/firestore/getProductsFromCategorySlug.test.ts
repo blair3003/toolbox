@@ -1,4 +1,4 @@
-import getProductsFromCategorySlug from './getProductsFromCategorySlug'
+import getProductsFromCategorySlug from '../firestore/getProductsFromCategorySlug'
 
 describe('getProductsFromCategorySlug', () => {
 
@@ -16,7 +16,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/11.jpg"
+            "image": "img/11.jpg"
         },
         {
             "id": "12",
@@ -30,7 +30,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/12.jpg"
+            "image": "img/12.jpg"
         },
         {
             "id": "13",
@@ -44,7 +44,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/13.jpg"
+            "image": "img/13.jpg"
         },
         {
             "id": "14",
@@ -58,7 +58,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/14.jpg"
+            "image": "img/14.jpg"
         },
         {
             "id": "15",
@@ -72,7 +72,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/15.jpg"
+            "image": "img/15.jpg"
         },
         {
             "id": "16",
@@ -86,7 +86,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/16.jpg"
+            "image": "img/16.jpg"
         },
         {
             "id": "17",
@@ -100,7 +100,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/17.jpg"
+            "image": "img/17.jpg"
         },
         {
             "id": "18",
@@ -114,7 +114,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/18.jpg"
+            "image": "img/18.jpg"
         },
         {
             "id": "19",
@@ -128,7 +128,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/19.jpg"
+            "image": "img/19.jpg"
         },
         {
             "id": "20",
@@ -142,7 +142,7 @@ describe('getProductsFromCategorySlug', () => {
                 "title": "Heating & Plumbing",
                 "slug": "heating-plumbing" 
             }],
-            "image": "http://localhost:3000/img/20.jpg"
+            "image": "img/20.jpg"
         }])
     })
 

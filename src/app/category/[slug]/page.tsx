@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import getProductsFromCategorySlug from '@/lib/getProductsFromCategorySlug'
+import getProductsFromCategorySlug from '@/lib/firestore/getProductsFromCategorySlug'
 import getAllCategories from '@/lib/firestore/getAllCategories'
 import getCategoryFromSlug from '@/lib/firestore/getCategoryFromSlug'
 import CategoryPage from '@/components/CategoryPage'

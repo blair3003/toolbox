@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
-import filterBuilderMap from '@/util/filterBuilderMap'
-import sortMap from '@/util/sortMap'
+import filterBuilderMap from '@/lib/util/filterBuilderMap'
+import sortMap from '@/lib/util/sortMap'
 
 const useProductListControls = (products: Product[]) => {
 

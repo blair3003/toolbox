@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
-import getProduct from '@/lib/getProduct'
-import getAllProducts from '@/lib/getAllProducts'
+import getProduct from '@/lib/firestore/getProduct'
+import getAllProducts from '@/lib/firestore/getAllProducts'
 import ProductPage from '@/components/ProductPage'
 
 export async function generateStaticParams() {

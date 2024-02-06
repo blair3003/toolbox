@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
-import getProductsFromSearchTerm from '@/lib/getProductsFromSearchTerm'
+import getProductsFromSearchTerm from '@/lib/firestore/getProductsFromSearchTerm'
 import SearchPage from '@/components/SearchPage'
 
 export default async function Search({ searchParams }: { searchParams: { q: string } }) {

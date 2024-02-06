@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { formatPrice } from '@/lib/formatPrice'
+import formatPrice from '@/lib/util/formatPrice'
 
 const useFilterList = (productList: Product[]) => {
 

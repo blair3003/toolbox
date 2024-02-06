@@ -1,4 +1,4 @@
-export const formatPrice = (cents: number, includeZeroCents?: boolean) => {
+const formatPrice = (cents: number, includeZeroCents?: boolean) => {
 	if (cents === 0) return `$0`
 
 	let dollars = (cents / 100).toFixed(2)
@@ -9,3 +9,5 @@ export const formatPrice = (cents: number, includeZeroCents?: boolean) => {
 
 	return `$${dollars}`
 }
+
+export default formatPrice

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { formatPrice } from '@/lib/formatPrice'
+import formatPrice from '@/lib/util/formatPrice'
 import ProductImage from './ProductImage'
 import RemoveFromCartButton from './RemoveFromCartButton'
 import CartItemQuantitySelect from './CartItemQuantitySelect'

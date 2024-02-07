@@ -17,10 +17,5 @@ export default async function Category({ params }: { params: { slug: string } })
     const category = await getCategoryFromSlug(slug)
 	if (!products?.length || !category) notFound()
 
-	return (
-        <main>
-            <CategoryPage category={category} products={products} />
-        </main>
-	)
-    
+	return <CategoryPage category={category} products={products} />    
 }

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { roboto } from '@/fonts/roboto'
 import './globals.css'
 import Header from '@/layouts/Header'
+import Main from '@/layouts/Main'
+import Footer from '@/layouts/Footer'
 import AuthProvider from '@/context/AuthProvider'
 import CartProvider from '@/context/CartProvider'
 import AccountProvider from '@/context/AccountProvider'
@@ -25,7 +27,10 @@ export default function RootLayout({
 				<AccountProvider>
 				<CartProvider>
 					<Header />
-					{children}
+					<Main>
+						{children}
+					</Main>
+					<Footer />
 				</CartProvider>
 				</AccountProvider>
 				</AuthProvider>

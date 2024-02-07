@@ -15,9 +15,5 @@ export default async function Product({ params }: { params: { slug: string[] } }
     const product = await getProduct(productId)
     if (!product) notFound()
 
-    return (
-        <main>
-            <ProductPage product={product} />
-        </main>
-    )
+    return <ProductPage product={product} />
 }

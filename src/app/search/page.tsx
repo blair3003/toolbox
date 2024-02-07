@@ -9,9 +9,5 @@ export default async function Search({ searchParams }: { searchParams: { q: stri
 
     const products = await getProductsFromSearchTerm(searchTerm)
 
-    return (
-        <main>
-            <SearchPage searchTerm={searchTerm} products={products} />
-        </main>
-    )
+    return <SearchPage searchTerm={searchTerm} products={products} />
 }

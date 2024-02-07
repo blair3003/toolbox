@@ -13,7 +13,7 @@ const ProductPage = ({ product }: ProductPageProps) => {
     const { isDarkMode } = useThemeContext()
 
     return (
-        <div className={`${isDarkMode ? "text-white bg-dark-gradient" : "text-black bg-white" }`}>
+        <div className={`min-h-screen ${isDarkMode ? "text-white bg-dark-gradient" : "text-black bg-white" }`}>
             <div className="p-2 lg:p-4 lg:max-w-screen-xl lg:mx-auto">
                 <section className="p-2 lg:p-4 grid lg:grid-cols-3 gap-2 lg:gap-4">
                     <h1 className="sr-only">{product.title}</h1>

@@ -8,7 +8,7 @@ interface ProductImageProps {
 const ProductImage = ({ src, alt }: ProductImageProps) => {
 
     return (
-        <div className="aspect-square rounded-lg shadow-2xl">
+        <div className="aspect-square overflow-hidden rounded-lg shadow-2xl">
             <Image
                 src={src ?? '/img/default.jpg'}
                 alt={alt}

@@ -9,27 +9,29 @@ const Header = () => {
 
     return (
         <header className="bg-stone-800 text-white">
-            <div className="lg:max-w-screen-xl lg:mx-auto flex gap-2 lg:gap-4 p-1">
-                <div className="flex items-center justify-around gap-2 basis-1/5 shrink-0 my-auto">
-                    <div className="p-1 max-w-40">
-                        <HomeLink />
+            <div className="lg:max-w-screen-xl lg:mx-auto">
+                <div className="h-10 lg:h-16 flex gap-2 p-2">
+                    <div className="flex items-center justify-around gap-2">
+                        <div className="">
+                            <HomeLink />
+                        </div>
+                        <div className="hidden lg:block">
+                            <CategoryMenu />
+                        </div>
                     </div>
-                    <div className="hidden lg:grid place-content-center">
-                        <CategoryMenu />
+                    <div className="grow flex items-center">
+                        <SearchBar />
                     </div>
-                </div>
-                <div className="grow my-auto">
-                    <SearchBar />
-                </div>
-                <div className="flex items-center justify-between gap-2 basis-1/5 shrink-0 my-auto p-1">
-                    <div className="grid place-content-center">
-                        <AccountMenu />
-                    </div>
-                    <div className="hidden lg:grid place-content-center">
-                        <FavoritesLink />
-                    </div>
-                    <div className="grid place-content-center">
-                        <CartLink />
+                    <div className="flex items-center justify-around gap-2">
+                        <div className="">
+                            <AccountMenu />
+                        </div>
+                        <div className="hidden lg:block">
+                            <FavoritesLink />
+                        </div>
+                        <div className="">
+                            <CartLink />
+                        </div>
                     </div>
                 </div>
             </div>

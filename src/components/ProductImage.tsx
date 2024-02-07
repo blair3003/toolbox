@@ -5,16 +5,18 @@ interface ProductImageProps {
     alt: string
 }
 
-const ProductImage = ({ src = '', alt }: ProductImageProps) => {
+const ProductImage = ({ src, alt }: ProductImageProps) => {
 
     return (
-        <div className="relative aspect-[5/4] overflow-hidden rounded-lg shadow-2xl">
+        <div className="aspect-square rounded-lg shadow-2xl">
             <Image
-                src={`/${src}`}
+                src={src ?? '/img/default.jpg'}
                 alt={alt}
-                fill={true}
+                height={1080}
+                width={1080}
                 sizes="(max-width: 1024px) 100vw, 67vw"
                 className="object-cover"
+                priority
             />
         </div>
     )

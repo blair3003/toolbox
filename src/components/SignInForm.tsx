@@ -9,6 +9,7 @@ import { useAuthContext } from '@/context/AuthProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
 import { auth } from '@/config/firebase'
 import { redirect } from 'next/navigation'
+import Loader from './Loader'
 
 const SignInForm = () => {
 
@@ -98,13 +99,16 @@ const SignInForm = () => {
             </div>
 
             <button type="submit" disabled={disabled} className="w-full p-4 mb-2 uppercase text-sm rounded shadow text-black bg-orange-600 hover:bg-orange-700" >
-                <span>Sign In</span>	
+                {disabled ? <Loader size={16} /> : <span>Sign In</span>}
             </button>
 
             <button type="button" disabled={disabled} onClick={signInWithGoogle} className={`w-full p-4 mb-2 rounded shadow uppercase text-sm text-white bg-black hover:bg-stone-950`}>
                 <div className="flex items-center justify-center gap-2">
-                    <FaGoogle />
-                    <span>Sign in with Google</span>
+                    {disabled ? <Loader size={16} /> :
+                    <>
+                        <FaGoogle />
+                        <span>Sign in with Google</span>
+                    </>}
                 </div>
             </button>
 

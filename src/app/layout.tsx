@@ -10,7 +10,10 @@ import AccountProvider from '@/context/AccountProvider'
 import ThemeProvider from '@/context/ThemeProvider'
 
 export const metadata: Metadata = {
-	title: 'Toolbox',
+    title: {
+        template: '%s - Toolbox',
+        default: 'Toolbox',
+    },
 	description: 'An e-commerce site for home improvement products',
 }
 

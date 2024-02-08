@@ -45,7 +45,7 @@ const CartDetails = () => {
             <div>
                 <Link
                     href="/checkout"
-                    className="block w-full p-2 text-center rounded-full shadow text-sm lg:text-base text-white bg-stone-900 hover:bg-stone-950 focus:bg-stone-950"
+                    className="block w-full p-2 text-center rounded-full shadow text-sm lg:text-base text-white bg-stone-800 hover:bg-stone-900 focus-visible:bg-stone-900"
                 >
                     Proceed to checkout
                 </Link>

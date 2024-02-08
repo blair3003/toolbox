@@ -1,24 +1,21 @@
 'use client'
 
-import { useCartContext } from '@/context/CartProvider'
+import Link from 'next/link'
 import { useThemeContext } from '@/context/ThemeProvider'
 import { bigShoulders } from '@/fonts/bigShoulders'
-import { useEffect } from 'react'
 
-const CheckoutPage = () => {
+const NotFoundPage = () => {
 
     const { isDarkMode } = useThemeContext()
-    const { clearCart } = useCartContext()
-
-    useEffect(clearCart, [])
 
     return (
         <div className={`min-h-screen ${isDarkMode ? "text-white bg-dark-gradient" : "text-black bg-white" }`}>
             <div className="lg:max-w-screen-xl lg:mx-auto">
                 <section className="p-2 lg:p-4">
                     <header className="p-2 lg:p-4 mb-2 lg:mb-4 text-left lg:text-center">
-                        <h1 className={`mb-2 lg:mb-4 text-xl lg:text-3xl uppercase text-orange-600 ${bigShoulders.className}`}>Checkout</h1>
-                        <p className="text-xs lg:text-base">Thank you for shopping at Toolbox, your items are on their way!</p>
+                        <h1 className={`text-xl lg:text-3xl uppercase text-orange-600 ${bigShoulders.className}`}>Not Found</h1>
+                        <p>Could not find requested resource</p>
+                        <Link href="/" className="underline">Return Home</Link>
                     </header>
                 </section>
             </div>
@@ -26,4 +23,4 @@ const CheckoutPage = () => {
     )
 }
 
-export default CheckoutPage
+export default NotFoundPage

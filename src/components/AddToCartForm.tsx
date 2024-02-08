@@ -41,7 +41,7 @@ const AddToCartForm = ({ product }: AddToCartFormProps) => {
             <button
                 onClick={handleSubmit}
                 title="Add to Cart"
-                className="w-full p-2 text-center rounded-full shadow text-sm lg:text-base text-white bg-stone-900 hover:bg-stone-950 focus:bg-stone-950"
+                className="w-full p-2 text-center rounded-full shadow text-sm lg:text-base text-white bg-stone-800 hover:bg-stone-900 focus-visible:bg-stone-900"
             >
                 Add to Cart
             </button>

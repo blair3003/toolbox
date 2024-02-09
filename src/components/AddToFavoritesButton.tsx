@@ -1,6 +1,7 @@
 'use client'
 
 import { useAccountContext } from '@/context/AccountProvider'
+import toast from 'react-hot-toast'
 
 interface AddToFavoritesButtonProps {
     product: Product
@@ -13,9 +14,13 @@ const AddToFavoritesButton = ({ product }: AddToFavoritesButtonProps) => {
     const isFavorite = !!account?.favorites[product.id]
 
     const handleFavorites = () => {
-        isFavorite
-            ? removeFromFavorites(product)
-            : addToFavorites(product)
+        if (isFavorite) {
+            removeFromFavorites(product)
+            toast.success('Removed from favorites', { icon: '💔' })
+        } else {
+            addToFavorites(product)
+            toast.success('Added to favorites', { icon: '❤️' })
+        }
     }
 
     if (!account) return null 

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import toast from 'react-hot-toast'
 import { useCartContext } from '@/context/CartProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
 
@@ -16,8 +17,9 @@ const AddToCartForm = ({ product }: AddToCartFormProps) => {
     const [quantity, setQuantity] = useState(1)
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
+        e.preventDefault()        
         addItemToCart(product, quantity)
+        toast.success('Added to cart', { icon: '🛒' })
     }
 
     return (

@@ -3,14 +3,23 @@
 import { useCartContext } from '@/context/CartProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
 import { bigShoulders } from '@/fonts/bigShoulders'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+import toast from 'react-hot-toast'
 
 const CheckoutPage = () => {
 
     const { isDarkMode } = useThemeContext()
     const { clearCart } = useCartContext()
 
-    useEffect(clearCart, [])
+    const effectRan = useRef(false)
+
+    useEffect(() => {
+        if (effectRan.current) {
+            clearCart()
+            toast.success('Cart cleared', { icon: '🛒' })
+        }
+        effectRan.current = true
+    }, [effectRan])
 
     return (
         <div className={`min-h-screen ${isDarkMode ? "text-white bg-dark-gradient" : "text-black bg-white" }`}>

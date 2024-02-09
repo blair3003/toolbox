@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useCartContext } from '@/context/CartProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
+import toast from 'react-hot-toast'
 
 interface CartItemQuantitySelectProps {
     product: Product

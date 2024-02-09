@@ -8,6 +8,7 @@ import AuthProvider from '@/context/AuthProvider'
 import CartProvider from '@/context/CartProvider'
 import AccountProvider from '@/context/AccountProvider'
 import ThemeProvider from '@/context/ThemeProvider'
+import { Toaster } from 'react-hot-toast'
 
 export const metadata: Metadata = {
     title: {
@@ -30,6 +31,7 @@ export default function RootLayout({
 				<AccountProvider>
 				<CartProvider>
 					<Header />
+					<Toaster position="top-center" />
 					<Main>
 						{children}
 					</Main>

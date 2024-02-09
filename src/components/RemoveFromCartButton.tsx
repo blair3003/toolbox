@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { HiCheck, HiMiniTrash, HiXMark } from 'react-icons/hi2'
 import { useCartContext } from '@/context/CartProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
+import toast from 'react-hot-toast'
 
 interface RemoveFromCartButtonProps {
     product: Product
@@ -19,6 +20,7 @@ const RemoveFromCartButton = ({ product }: RemoveFromCartButtonProps) => {
     const handleRemoveItem = () => {
         removeItemFromCart(product)
         dialogRef.current?.close()
+        toast.success('Removed from cart', { icon: '🛒' })
     }
 
     return (

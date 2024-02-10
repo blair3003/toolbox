@@ -19,11 +19,12 @@ const CartItemQuantitySelect = ({ product, quantity }: CartItemQuantitySelectPro
         setSelection(Number(e.target.value))
     }
 
-    const handleClick = () => {
+    useEffect(() => {
         if (selection > 0) {
             updateItemQuantity(product, selection)
+            toast.success('Item quantity updated', { icon: '🛒' })
         }
-    }
+    }, [selection])
 
     return (
         <form onSubmit={e => e.preventDefault()}>
@@ -32,8 +33,6 @@ const CartItemQuantitySelect = ({ product, quantity }: CartItemQuantitySelectPro
                 id="product-quantity"
                 value={selection}
                 onChange={handleChange}
-                onClick={handleClick}
-                onTouchEnd={handleClick}
                 style={{ colorScheme: isDarkMode ? 'dark' : 'normal' }}
                 className={`w-full p-2 rounded-lg shadow-2xl cursor-pointer ${isDarkMode ? 'text-white' : 'text-black'}`}
             >

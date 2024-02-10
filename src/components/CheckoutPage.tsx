@@ -11,14 +11,9 @@ const CheckoutPage = () => {
     const { isDarkMode } = useThemeContext()
     const { clearCart } = useCartContext()
 
-    const effectRan = useRef(false)
-
     useEffect(() => {
-        if (effectRan.current) {
-            clearCart()
-            toast.success('Cart cleared', { icon: '🛒' })
-        }
-        effectRan.current = true
+        clearCart()
+        toast.success('Cart cleared', { icon: '🛒' })
     }, [])
 
     return (

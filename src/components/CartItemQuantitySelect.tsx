@@ -33,6 +33,7 @@ const CartItemQuantitySelect = ({ product, quantity }: CartItemQuantitySelectPro
                 value={selection}
                 onChange={handleChange}
                 onClick={handleClick}
+                onBlur={handleClick}
                 style={{ colorScheme: isDarkMode ? 'dark' : 'normal' }}
                 className={`w-full p-2 rounded-lg shadow-2xl cursor-pointer ${isDarkMode ? 'text-white' : 'text-black'}`}
             >

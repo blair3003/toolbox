@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { HiArrowRightOnRectangle, HiShoppingCart } from 'react-icons/hi2'
+import { HiArrowRightOnRectangle, HiHeart, HiShoppingCart } from 'react-icons/hi2'
 import { useAccountContext } from '@/context/AccountProvider'
 import { useThemeContext } from '@/context/ThemeProvider'
 import DarkModeToggle from './DarkModeToggle'
@@ -35,6 +35,22 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 			</li>
 			<li>
 				<Link
+					href="/favorites"
+					className={`block w-full px-4 py-2 text-nowrap ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : 'text-black hover:bg-stone-200 focus:bg-stone-200'}`}
+				>
+					<div className="flex items-center gap-2">
+                        <div className="h-8 w-8 text-2xl grid place-content-center">
+                            <HiHeart />
+                        </div>						
+						<span>Favorites</span>
+					</div>
+				</Link>
+			</li>
+			<li>
+				<DarkModeToggle/>
+			</li>
+			<li>
+				<Link
 					href="/logout"
 					className={`block w-full px-4 py-2 text-nowrap ${isDarkMode ? 'text-white hover:bg-stone-700 focus:bg-stone-700' : 'text-black hover:bg-stone-200 focus:bg-stone-200'}`}
 				>
@@ -45,9 +61,6 @@ const AccountLinks = ({ isOpen }: AccountLinksProps) => {
 						<span>Sign out</span>
 					</div>
 				</Link>
-			</li>
-			<li>
-				<DarkModeToggle/>
 			</li>
 		</ol>
 	)

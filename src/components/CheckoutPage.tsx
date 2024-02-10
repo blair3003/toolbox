@@ -19,7 +19,7 @@ const CheckoutPage = () => {
             toast.success('Cart cleared', { icon: '🛒' })
         }
         effectRan.current = true
-    }, [effectRan])
+    }, [clearCart])
 
     return (
         <div className={`min-h-screen ${isDarkMode ? "text-white bg-dark-gradient" : "text-black bg-white" }`}>

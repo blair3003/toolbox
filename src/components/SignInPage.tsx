@@ -15,7 +15,6 @@ const SignPage = () => {
                 <section className="p-2 lg:p-4">
                     <header className="p-2 lg:p-4 mb-2 lg:mb-4 text-left lg:text-center">
                         <h1 className={`mb-2 lg:mb-4 text-xl lg:text-3xl uppercase text-orange-600 ${bigShoulders.className}`}>Sign In</h1>
-                        <p className="text-xs lg:text-base">New customers can register <Link href="/register" className="underline">here</Link>.</p>
                     </header>
                     <SignInForm />
                 </section>

@@ -12,7 +12,7 @@ The application uses the Next JS app router pattern with React Context to provid
 
 Features of the app include:
 
-- **Product Sort & Filter** - Products can be filtered and sorted useing UI controls.
+- **Product Sort & Filter** - Products can be filtered and sorted using UI controls.
 - **React Toast Popups** - Popups notifications provided by React Toast indicate updates to the cart and favorites.
 - **Firestore Database** - Data is stored as collections of documents in the no-SQL Firestore Database.
 - **Account Cart Preserved** - Carts are stored with the user's account or in local storage if not signed in.

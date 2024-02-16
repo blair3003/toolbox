@@ -17,6 +17,7 @@ const ProductImage = ({ src, alt }: ProductImageProps) => {
                 sizes="(max-width: 1024px) 100vw, 67vw"
                 className="object-cover"
                 priority
+                placeholder="blur"
             />
         </div>
     )
